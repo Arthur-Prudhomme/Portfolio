@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body{
+    background-color: #530866;
+}
+
+.logo{
+    display: flex;
+    padding-top: 50px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.back_grid{
+    display: flex;
+    padding-top: 50px;
+    width: 100%;
+}
+
+@media screen and (max-aspect-ratio: 3/2){
+    .logo{
+        width: 95%;
+    }
+}
