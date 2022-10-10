@@ -12,7 +12,7 @@ body{
 .logo{
     display: flex;
     padding-top: 50px;
-    width: 50%;
+    width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -23,8 +23,24 @@ body{
     width: 100%;
 }
 
-@media screen and (max-aspect-ratio: 3/2){
+.window{
+    width: 500px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background: silver;
+    box-shadow: inset -3px -3px #0a0a0a,inset 3px 3px #dfdfdf,inset -4px -4px grey,inset 4px 4px #fff;
+}
+
+@media screen and (max-width: 850px) and (max-aspect-ratio: 3/2){
     .logo{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 550px) and (max-aspect-ratio: 3/2){
+
+    .window{
         width: 95%;
     }
 }
