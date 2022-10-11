@@ -1,3 +1,10 @@
+:root{
+    --global-back-color : #530866;
+    --window-box-shadow : inset -3px -3px #0a0a0a,inset 3px 3px #dfdfdf,inset -4px -4px grey,inset 4px 4px #fff;
+    --window-title-back : linear-gradient(90deg,navy,#1084d0);
+    --window-button-box-shadow : inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px grey,inset 2px 2px #dfdfdf;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -8,22 +15,35 @@
 }
 
 body{
-    background-color: #530866;
+    background-color: var(--global-back-color);
 }
 
 .logo{
     display: flex;
     padding-top: 50px;
+    padding-bottom: 50px;
     width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.back_grid{
-    display: flex;
-    padding-top: 50px;
+.back-grid {
     width: 100%;
+    height: 500px;
+    background: url("./imgs/neon\ grid.png");
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
+/* .back_grid{
+    object-fit: cover;
+    padding-top: 50px;
+    object-position: center bottom;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+} */
 
 .projects{
     display: grid;
@@ -37,7 +57,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     background: silver;
-    box-shadow: inset -3px -3px #0a0a0a,inset 3px 3px #dfdfdf,inset -4px -4px grey,inset 4px 4px #fff;
+    box-shadow: var(--window-box-shadow);
     padding: 6px;
 }
 
@@ -47,7 +67,7 @@ body{
 
 .window-title-bar{
     align-items: center;
-    background: linear-gradient(90deg,navy,#1084d0);
+    background: var(--window-title-back);
     display: flex;
     justify-content: space-between;
     padding: 3px 2px 3px 3px;
@@ -72,7 +92,7 @@ body{
     position: static;
     right: 0;
     background: silver;
-    box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px grey,inset 2px 2px #dfdfdf;
+    box-shadow: var(--window-button-box-shadow);
     /* border:none; */
     border-radius: 0;
     box-sizing: border-box;
