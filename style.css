@@ -18,6 +18,7 @@
     position:fixed;
     width:100%;
     height: 90px;
+    z-index: 1;
 }
 
 .nav-menu ul{
@@ -30,6 +31,7 @@
     color:white;
     text-decoration: none;
     font-size: 20px;
+    font-weight: bold;
 }
 
 .nav-menu img{
@@ -40,16 +42,37 @@ body{
     background-color: #0F0F10;
 }
 
-.home{
-    background: url("./imgs/accueil.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.home, .about, .project{
     width: 100%;
     height: 100vh;
 }
 
-.scroll-container{
-    overflow-y: scroll;
+.project{
+    background-color: white;
+}
+
+.contact{
+    width: 100%;
+    height: 50vh;
+}
+
+.home-content{
+    width: 100%;
     height: 100%;
+    background: url("./imgs/accueil.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 40vw 0rem 5vw rgba(0,0,0,0.4);
+}
+
+.home-content h1{
+    margin-left: 80px;
+    color: white;
+    font-size: 100px;
+    text-align: left;
+    position: relative;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
 }
