@@ -4,7 +4,7 @@
     box-sizing: border-box;
     text-align: center;
     font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     scroll-behavior: smooth;
 }
 
@@ -16,7 +16,7 @@
     padding: 16px 32px;
     box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.3);
     position:fixed;
-    width:100%;
+    width: 100%;
     height: 90px;
     z-index: 1;
 }
@@ -24,7 +24,7 @@
 .nav-menu ul{
     display: flex;
     list-style: none;
-    gap: 4rem;
+    gap: 3rem;
 }
 
 .nav-menu ul a{
@@ -48,7 +48,7 @@ body{
 }
 
 .project{
-    background-color: white;
+    background-color: rgb(126, 123, 123);
 }
 
 .contact{
@@ -73,6 +73,41 @@ body{
     text-align: left;
     position: relative;
     top: 50%;
-    left: 0;
     transform: translate(0, -50%);
+    left: 0;
+}
+
+.about-content{
+    display: flex;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: white;
+    justify-content: center;
+}
+
+.split-bar{
+    border-left: 2px solid rgb(255, 255, 255);
+    height: 60vh;
+    margin: 0 50px
+}
+
+.about-content img{
+    height: 60vh;
+    border-radius: 75px;
+}
+
+.about-text a{
+    color:#1CD3C8;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.about-content p{
+    width: 388px;
+    text-align: left;
 }
