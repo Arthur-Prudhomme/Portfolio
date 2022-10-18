@@ -4,6 +4,7 @@
 <head>
     <link href="./style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
 </head>
 
 
@@ -22,7 +23,19 @@
     </header>
 
     <section class="home" id="sc-accueil">
-        <div class="home-content"><h1>Imaginer<br>Créer<br>Déployer</h1></div>
+        <div class="home-content">
+            <ul>
+                <li>
+                    <h1>Imaginer</h1>
+                </li>
+                <li>
+                    <h1>Créer</h1>
+                </li>
+                <li>
+                    <h1 class="colored-title">Déployer</h1>
+                </li>
+            </ul>
+        </div>
     </section>
 
     <section class="about" id="sc-a_propos">
@@ -37,13 +50,35 @@
     </section>
 
     <section class="project" id="sc-projets">
-        <div class="projet-content"></div>
+        <div class="projet-content">
+            <div class="tab">
+                <button class="tablinks active" onclick="openCity(event, 'London')"><i class="fas fa-circle"></i></button>
+                <button class="tablinks" onclick="openCity(event, 'Paris')"><i class="fas fa-circle"></i></button>
+                <button class="tablinks" onclick="openCity(event, 'Tokyo')"><i class="fas fa-circle"></i></button>
+              </div>
+
+              <div id="London" class="tabcontent" style="display : block">
+                <h3>London</h3>
+                <p>London is the capital city of England.</p>
+              </div>
+              
+              <div id="Paris" class="tabcontent">
+                <h3>Paris</h3>
+                <p>Paris is the capital of France.</p>
+              </div>
+              
+              <div id="Tokyo" class="tabcontent">
+                <h3>Tokyo</h3>
+                <p>Tokyo is the capital of Japan.</p>
+              </div>
+        </div>
     </section>
 
     <section class="contact" id="sc-contacts">
         <div class="contact-content"></div>
     </section>
 
+    <script src="script.js"></script>
 </body>
 
 </html>

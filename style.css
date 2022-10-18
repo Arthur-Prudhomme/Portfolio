@@ -47,10 +47,6 @@ body{
     height: 100vh;
 }
 
-.project{
-    background-color: rgb(126, 123, 123);
-}
-
 .contact{
     width: 100%;
     height: 50vh;
@@ -66,15 +62,23 @@ body{
     box-shadow: inset 40vw 0rem 5vw rgba(0,0,0,0.4);
 }
 
-.home-content h1{
+.home-content ul{
     margin-left: 80px;
-    color: white;
-    font-size: 100px;
-    text-align: left;
     position: relative;
     top: 50%;
     transform: translate(0, -50%);
     left: 0;
+    list-style: none;
+}
+
+.home-content li h1{
+    font-size: 100px;
+    text-align: left;
+    color: white;
+}
+
+.home-content li .colored-title{
+    color: #1CD3C8;
 }
 
 .about-content{
@@ -84,16 +88,15 @@ body{
     transform: translate(0, -50%);
     color: white;
     justify-content: center;
+    height: 60vh;
 }
 
 .split-bar{
     border-left: 2px solid rgb(255, 255, 255);
-    height: 60vh;
     margin: 0 50px
 }
 
 .about-content img{
-    height: 60vh;
     border-radius: 75px;
 }
 
@@ -107,7 +110,50 @@ body{
     margin-top: 1rem;
 }
 
-.about-content p{
-    width: 388px;
+.about-text p{
+    width: 60vh;
     text-align: left;
+}
+
+.tab {
+    overflow: hidden;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+    font-size: 50px;
+    padding: 0 15px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    color: #0c5853;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    color: #1CD3C8;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    color: white;
+}
+
+.projet-content{
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: white;
+    justify-content: center;
+    height: 60vh;
 }
