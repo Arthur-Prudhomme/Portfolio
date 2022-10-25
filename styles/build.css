@@ -86,17 +86,15 @@ body .about .about-content span {
 body .about .about-content img {
   border-radius: 75px;
 }
+body .about .about-content .about-text p {
+  width: 60vh;
+  text-align: left;
+}
 body .about .about-content .about-text a {
   color: #1CD3C8;
-  text-decoration: none;
   font-size: 30px;
   font-weight: bold;
   display: flex;
-  text-align: left;
-  margin-top: 1rem;
-}
-body .about .about-content .about-text p {
-  width: 60vh;
   text-align: left;
 }
 body .project .projet-content {
@@ -162,6 +160,8 @@ body .project .projet-content .pro-container a .pro h1 {
   position: relative;
   top: 50%;
   transform: translate(0, -50%);
+  background-color: #0a0a0a;
+  border-radius: 25px;
 }
 body .contact {
   width: 100%;
