@@ -35,15 +35,15 @@
   width: 4rem;
 }
 
+.light-mode {
+  background-color: #e1e1e6;
+  color: rgb(0, 0, 0);
+}
+
 body .home, body .about, body .project {
   width: 100%;
   height: 100vh;
   background-color: #0F0F10;
-}
-body .contact {
-  width: 100%;
-  height: 50vh;
-  background-color: #0a0a0a;
 }
 body .home .home-content {
   width: 100%;
@@ -131,6 +131,42 @@ body .project .projet-content .tabcontent {
   display: none;
   padding: 6px 12px;
   color: white;
+}
+body .project .projet-content .pro-container {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  grid-template-rows: repeat(2, 220px);
+  position: relative;
+  justify-content: center;
+  gap: 10px;
+}
+body .project .projet-content .pro-container a {
+  text-decoration: none;
+  color: #1CD3C8;
+}
+body .project .projet-content .pro-container a .pro {
+  width: 100%;
+  height: 100%;
+  background: url("../imgs/accueil.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 25px;
+}
+body .project .projet-content .pro-container a .pro:hover {
+  opacity: 0.5;
+}
+body .project .projet-content .pro-container a .pro h1 {
+  font-size: 50px;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+body .contact {
+  width: 100%;
+  height: 50vh;
+  background-color: #0a0a0a;
 }
 
 /*# sourceMappingURL=build.css.map */

@@ -11,7 +11,7 @@
 <body>
 
     <header>
-        <nav class= "nav-menu">
+        <nav class= "nav-menu" id="nav">
             <a href="index.html"><img src="./imgs/logo.png" alt="logo"></a>
             <ul>
                 <li><a href="#sc-accueil">Accueil</a></li>
@@ -52,24 +52,42 @@
     <section class="project" id="sc-projets">
         <div class="projet-content">
             <div class="tab">
-                <button class="tablinks active" onclick="openCity(event, 'London')"><i class="fas fa-circle"></i></button>
-                <button class="tablinks" onclick="openCity(event, 'Paris')"><i class="fas fa-circle"></i></button>
-                <button class="tablinks" onclick="openCity(event, 'Tokyo')"><i class="fas fa-circle"></i></button>
+                <button class="tablinks active" onclick="openPage(event, 'page-1')"><i class="fas fa-circle"></i></button>
+                <button class="tablinks" onclick="openPage(event, 'page-2')"><i class="fas fa-circle"></i></button>
+                <button class="tablinks" onclick="openPage(event, 'page-3')"><i class="fas fa-circle"></i></button>
             </div>
 
-            <div id="London" class="tabcontent" style="display : block">
-            <h3>London</h3>
-            <p>London is the capital city of England.</p>
+            <div id="page-1" class="tabcontent" style="display : block">
+                <div class="pro-container">
+                    <a href=""><div class="pro"><h1>Titre</h1></div></a>
+                    <a href=""><div class="pro"><h1>Titre</h1></div></a>
+                    <a href=""><div class="pro"><h1>Titre</h1></div></a>
+                    <a href=""><div class="pro"><h1>Titre</h1></div></a>
+                    <a href=""><div class="pro"><h1>Titre</h1></div></a>
+                    <a href=""><div class="pro"><h1>Titre</h1></div></a>
+                </div>
             </div>
             
-            <div id="Paris" class="tabcontent">
-            <h3>Paris</h3>
-            <p>Paris is the capital of France.</p>
+            <div id="page-2" class="tabcontent">
+                <div class="pro-container">
+                    <a href=""><div class="pro"><h1>Titre</h1></div></a>
+                    <a href=""><div class="pro"><h1>Titre</h1></div></a>
+                    <a href=""><div class="pro"><h1>Titre</h1></div></a>
+                    <a href=""><div class="pro"><h1>Titre</h1></div></a>
+                    <a href=""><div class="pro"><h1>Titre</h1></div></a>
+                    <a href=""><div class="pro"><h1>Titre</h1></div></a>
+                </div>
             </div>
             
-            <div id="Tokyo" class="tabcontent">
-            <h3>Tokyo</h3>
-            <p>Tokyo is the capital of Japan.</p>
+            <div id="page-3" class="tabcontent">
+                <div class="pro-container">
+                    <a href=""><div class="pro"><h1>Titre</h1></div></a>
+                    <a href=""><div class="pro"><h1>Titre</h1></div></a>
+                    <a href=""><div class="pro"><h1>Titre</h1></div></a>
+                    <a href=""><div class="pro"><h1>Titre</h1></div></a>
+                    <a href=""><div class="pro"><h1>Titre</h1></div></a>
+                    <a href=""><div class="pro"><h1>Titre</h1></div></a>
+                </div>
             </div>
         </div>
     </section>
