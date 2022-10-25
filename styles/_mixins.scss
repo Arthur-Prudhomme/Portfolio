@@ -1,0 +1,6 @@
+@mixin color(){
+    color: #1CD3C8;
+    &:hover{
+        animation: color-change 2s infinite;
+    }
+}
