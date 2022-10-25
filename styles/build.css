@@ -45,6 +45,9 @@
   font-size: 20px;
   font-weight: bold;
 }
+.nav-menu ul a:hover {
+  animation: color-change 2s infinite;
+}
 .nav-menu img {
   width: 4rem;
 }
