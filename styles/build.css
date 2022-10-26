@@ -1,3 +1,13 @@
+:root {
+  --bg-dark: #0e0e0f;
+  --bg-light: #e7e3e3;
+  --darker-dark: #0a0a0a;
+  --darker-light: #bdbdbd;
+  --blue: #1CD3C8;
+  --yellow: #ebd161;
+  --violet: #e26ae2;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,20 +20,21 @@
 
 @keyframes color-change {
   0% {
-    color: #1CD3C8;
+    color: var(--blue);
   }
   40% {
-    color: #ebd161;
+    color: var(--yellow);
   }
   80% {
-    color: #e26ae2;
+    color: var(--violet);
   }
   100% {
-    color: #1CD3C8;
+    color: var(--blue);
   }
 }
 .nav-menu {
-  background: #0C0C0D;
+  background: var(--darker-dark);
+  transition: 0.3s;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,10 +63,55 @@
   width: 4rem;
 }
 
+.contact {
+  width: 100%;
+  height: 50vh;
+  background-color: var(--darker-dark);
+  color: white;
+  transition: 0.3s;
+}
+.contact .contact-content {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 50px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.contact .contact-content .contact-bloc {
+  display: block;
+}
+.contact .contact-content .contact-bloc .light-icons {
+  display: unset;
+}
+.contact .contact-content .contact-bloc .dark-icons {
+  display: none;
+}
+.contact .contact-content .contact-bloc img {
+  width: 50px;
+}
+.contact .contact-content .contact-bloc h1, .contact .contact-content .contact-bloc h2 {
+  text-align: left;
+}
+.contact .contact-content .contact-bloc a, .contact .contact-content .contact-bloc h1 {
+  font-size: 75px;
+  color: #1CD3C8;
+}
+.contact .contact-content .contact-bloc a:hover, .contact .contact-content .contact-bloc h1:hover {
+  animation: color-change 2s infinite;
+}
+.contact .contact-content .contact-bloc h2 {
+  font-size: 30px;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: white;
+  transition: 0.3s;
+}
 body .home, body .about, body .project {
   width: 100%;
   height: 100vh;
-  background-color: #0F0F10;
 }
 body .home .home-content {
   width: 100%;
@@ -87,7 +143,6 @@ body .about .about-content {
   position: relative;
   top: 50%;
   transform: translate(0, -50%);
-  color: white;
   justify-content: center;
   height: 60vh;
 }
@@ -117,7 +172,6 @@ body .project .projet-content {
   position: relative;
   top: 50%;
   transform: translate(0, -50%);
-  color: white;
   justify-content: center;
   height: 60vh;
 }
@@ -151,7 +205,6 @@ body .project .projet-content .tab button.active:hover {
 body .project .projet-content .tabcontent {
   display: none;
   padding: 6px 12px;
-  color: white;
 }
 body .project .projet-content .pro-container {
   display: grid;
@@ -189,38 +242,90 @@ body .project .projet-content .pro-container a .pro h1 {
   background-color: #0a0a0a;
   border-radius: 25px;
 }
-body .contact {
-  width: 100%;
-  height: 50vh;
-  background-color: #0a0a0a;
+
+.light-mode-body {
+  background-color: var(--bg-light);
+  color: black;
 }
-body .contact .contact-content {
-  position: relative;
-  top: 50%;
-  transform: translate(0, -50%);
-  padding: 50px 40px;
-  display: flex;
-  justify-content: space-between;
+.light-mode-body button i {
+  color: black;
 }
-body .contact .contact-content .contact-bloc {
-  display: block;
-}
-body .contact .contact-content .contact-bloc img {
-  width: 50px;
-}
-body .contact .contact-content .contact-bloc h1, body .contact .contact-content .contact-bloc h2 {
-  text-align: left;
-}
-body .contact .contact-content .contact-bloc a, body .contact .contact-content .contact-bloc h1 {
-  font-size: 75px;
+.light-mode-body button:hover i {
   color: #1CD3C8;
+  opacity: 0.5;
 }
-body .contact .contact-content .contact-bloc a:hover, body .contact .contact-content .contact-bloc h1:hover {
+.light-mode-body button:hover i:hover {
   animation: color-change 2s infinite;
 }
-body .contact .contact-content .contact-bloc h2 {
-  font-size: 30px;
-  color: white;
+.light-mode-body button.active i {
+  color: #1CD3C8;
+  opacity: 1;
+}
+.light-mode-body button.active i:hover {
+  animation: color-change 2s infinite;
+}
+.light-mode-body .about .about-content span {
+  border-left: 2px solid rgb(0, 0, 0);
+}
+
+.light-mode-second {
+  background-color: var(--darker-light);
+  color: black;
+}
+.light-mode-second ul a {
+  color: black;
+}
+.light-mode-second .contact-content .contact-bloc .light-icons {
+  display: none;
+}
+.light-mode-second .contact-content .contact-bloc .dark-icons {
+  display: unset;
+}
+
+.switch {
+  display: block;
+  position: relative;
+  margin: auto;
+  width: 50px;
+  height: 22px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.switch input {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 0;
+  height: 0;
+}
+.switch input + span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-radius: 20px;
+}
+.switch input:checked + span {
+  background: #000000;
+}
+.switch input + span:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  width: 18px;
+  height: 18px;
+  background: rgb(0, 0, 0);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+}
+.switch input:checked + span:before {
+  left: 28px;
+  background: #ffffff;
 }
 
 /*# sourceMappingURL=build.css.map */

@@ -1,5 +1,15 @@
 @use 'mixins';
 
+:root {
+    --bg-dark: #0e0e0f;
+    --bg-light: #e7e3e3;
+    --darker-dark: #0a0a0a;
+    --darker-light: #bdbdbd;
+    --blue: #1CD3C8;
+    --yellow: #ebd161;
+    --violet: #e26ae2;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -11,14 +21,15 @@
 }
 
 @keyframes color-change {
-    0% { color: #1CD3C8; }
-    40% { color: #ebd161; }
-    80% { color: #e26ae2; }
-    100% { color: #1CD3C8; }
+    0% { color: var(--blue); }
+    40% { color: var(--yellow); }
+    80% { color: var(--violet); }
+    100% { color: var(--blue); }
   }
 
 .nav-menu{
-    background: #0C0C0D;
+    background: var(--darker-dark);
+    transition: 0.3s;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,11 +58,51 @@
     }
 }
 
+.contact{
+    width: 100%;
+    height: 50vh;
+    background-color: var(--darker-dark);
+    color: white;
+    transition: 0.3s;
+    .contact-content{
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+        padding: 50px 40px;
+        display: flex;
+        justify-content:space-between;
+        .contact-bloc{
+            display: block;
+            .light-icons{
+                display: unset;
+            }
+            .dark-icons{
+                display: none;
+            }
+            img{
+                width: 50px;
+            }
+            h1,h2{
+                text-align: left;
+            }
+            a, h1{
+                font-size: 75px;
+                @include mixins.color;
+            }
+            h2{
+                font-size: 30px;
+            }
+        }
+    }
+}
+
 body{
+    background-color: var(--bg-dark);
+    color: white;
+    transition: 0.3s;
     .home, .about, .project{
         width: 100%;
         height: 100vh;
-        background-color: #0F0F10;
     }
     .home{
         .home-content{
@@ -88,7 +139,6 @@ body{
             position: relative;
             top: 50%;
             transform: translate(0, -50%);
-            color: white;
             justify-content: center;
             height: 60vh;
             span{
@@ -119,7 +169,6 @@ body{
             position: relative;
             top: 50%;
             transform: translate(0, -50%);
-            color: white;
             justify-content: center;
             height: 60vh;
             .tab{
@@ -146,7 +195,6 @@ body{
             .tabcontent {
                 display: none;
                 padding: 6px 12px;
-                color: white;
             }
             .pro-container{
                 display: grid;
@@ -183,34 +231,99 @@ body{
             }
         }
     }
-    .contact{
-        width: 100%;
-        height: 50vh;
-        background-color: #0a0a0a;
-        .contact-content{
-            position: relative;
-            top: 50%;
-            transform: translate(0, -50%);
-            padding: 50px 40px;
-            display: flex;
-            justify-content:space-between;
-            .contact-bloc{
-                display: block;
-                img{
-                    width: 50px;
-                }
-                h1,h2{
-                    text-align: left;
-                }
-                a, h1{
-                    font-size: 75px;
-                    @include mixins.color;
-                }
-                h2{
-                    font-size: 30px;
-                    color: white;
-                }
+}
+
+.light-mode-body {
+    background-color: var(--bg-light);
+    color: black;
+    button{
+        i{
+            color: black;
+        }
+    }
+    button:hover{
+        i{
+            @include mixins.color;
+            opacity: 0.5;
+        }
+    }
+    button.active{
+        i{
+            @include mixins.color;
+            opacity: 1;
+        }
+    }
+    .about{
+        .about-content{
+            span{
+                border-left: 2px solid rgb(0, 0, 0);
             }
         }
+    }
+}
+
+.light-mode-second {
+    background-color: var(--darker-light);
+    color: black;
+    ul{
+        a{
+            color: black;
+        }
+    }
+    .contact-content{
+        .contact-bloc{
+            .light-icons{
+                display: none;
+            }
+            .dark-icons{
+                display: unset;
+            }
+        }
+    }
+}
+
+.switch {
+    display: block;
+    position: relative;
+    margin: auto; 
+    width: 50px;
+    height: 22px;
+    cursor: pointer;
+    overflow: hidden;
+    input {
+        position: absolute;
+        top: -30px;
+        left: -30px;
+        width: 0;
+        height: 0;
+    }
+    input + span {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        border-radius: 20px;
+    }
+    input:checked + span {
+        background: #000000;
+    }
+    input + span:before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 4px;
+        width: 18px;
+        height: 18px;
+        background: rgb(0, 0, 0);
+        border-radius: 50%;
+        transform: translateY(-50%);
+        transition: all .3s;
+    }
+    input:checked + span:before {
+        left: 28px;
+        background: #ffffff;
     }
 }
