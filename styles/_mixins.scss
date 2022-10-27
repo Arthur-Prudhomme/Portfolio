@@ -5,9 +5,9 @@
     }
 }
 
-@mixin gradient_rvb(){
-    color: #d31c34;
+@mixin gradient_darker_cym(){
+    color: var(--darker-blue);
     &:hover{
-        animation: gradient_rvb_data 2s infinite;
+        animation: gradient_darker_cym_data 3s infinite;
     }
 }

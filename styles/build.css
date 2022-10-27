@@ -6,9 +6,9 @@
   --blue: #1ad1c5;
   --yellow: #ebd161;
   --magenta: #e26ae2;
-  --red: #b90c23;
-  --violet: #ba09ca;
-  --dark-blue: #441cd3;
+  --darker-blue: #11837b;
+  --darker-yellow: #b49922;
+  --darker-magenta: #941794;
 }
 
 * {
@@ -35,18 +35,18 @@
     color: var(--blue);
   }
 }
-@keyframes gradient_rvb_data {
+@keyframes gradient_darker_cym_data {
   0% {
-    color: var(--red);
+    color: var(--darker-blue);
   }
   40% {
-    color: var(--violet);
+    color: var(--darker-yellow);
   }
   80% {
-    color: var(--dark-blue);
+    color: var(--darker-magenta);
   }
   100% {
-    color: var(--red);
+    color: var(--darker-blue);
   }
 }
 .nav-menu {
@@ -68,15 +68,13 @@
   gap: 3rem;
 }
 .nav-menu ul a {
-  color: white;
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
+  color: var(--blue);
+  color: white;
 }
 .nav-menu ul a:hover {
-  color: var(--blue);
-}
-.nav-menu ul a:hover:hover {
   animation: gradient_cym_data 3s infinite;
 }
 .nav-menu img {
@@ -115,10 +113,7 @@ body .home .home-content ul li h1 {
   color: white;
 }
 body .home .home-content ul li .colored-title {
-  color: var(--blue);
-}
-body .home .home-content ul li .colored-title:hover {
-  animation: gradient_cym_data 3s infinite;
+  animation: gradient_cym_data 4s infinite;
 }
 body .about .about-content {
   display: flex;
@@ -149,7 +144,7 @@ body .about .about-content .about-text a {
 body .about .about-content .about-text a:hover {
   animation: gradient_cym_data 3s infinite;
 }
-body .project .projet-content {
+body .project .project-content {
   display: block;
   position: relative;
   top: 50%;
@@ -157,10 +152,10 @@ body .project .projet-content {
   justify-content: center;
   height: 60vh;
 }
-body .project .projet-content .tab {
+body .project .project-content .tab {
   overflow: hidden;
 }
-body .project .projet-content .tab button {
+body .project .project-content .tab button {
   background-color: inherit;
   border: none;
   outline: none;
@@ -170,25 +165,25 @@ body .project .projet-content .tab button {
   font-size: 50px;
   padding: 0 15px;
 }
-body .project .projet-content .tab button:hover {
+body .project .project-content .tab button:hover {
   color: var(--blue);
   opacity: 0.5;
 }
-body .project .projet-content .tab button:hover:hover {
+body .project .project-content .tab button:hover:hover {
   animation: gradient_cym_data 3s infinite;
 }
-body .project .projet-content .tab button.active {
+body .project .project-content .tab button.active {
   color: var(--blue);
   opacity: 1;
 }
-body .project .projet-content .tab button.active:hover {
+body .project .project-content .tab button.active:hover {
   animation: gradient_cym_data 3s infinite;
 }
-body .project .projet-content .tabcontent {
+body .project .project-content .tabcontent {
   display: none;
   padding: 6px 12px;
 }
-body .project .projet-content .pro-container {
+body .project .project-content .pro-container {
   display: grid;
   grid-template-columns: repeat(3, 350px);
   grid-template-rows: repeat(2, 220px);
@@ -196,14 +191,14 @@ body .project .projet-content .pro-container {
   justify-content: center;
   gap: 10px;
 }
-body .project .projet-content .pro-container a {
+body .project .project-content .pro-container a {
   text-decoration: none;
   color: var(--blue);
 }
-body .project .projet-content .pro-container a:hover {
+body .project .project-content .pro-container a:hover {
   animation: gradient_cym_data 3s infinite;
 }
-body .project .projet-content .pro-container a .pro {
+body .project .project-content .pro-container a .pro {
   width: 100%;
   height: 100%;
   background: url("../imgs/accueil.jpg");
@@ -212,17 +207,18 @@ body .project .projet-content .pro-container a .pro {
   background-repeat: no-repeat;
   border-radius: 25px;
 }
-body .project .projet-content .pro-container a .pro:hover {
+body .project .project-content .pro-container a .pro:hover {
   opacity: 0.5;
 }
-body .project .projet-content .pro-container a .pro h1 {
+body .project .project-content .pro-container a .pro h1 {
   font-size: 50px;
   text-align: center;
   position: relative;
   top: 50%;
   transform: translate(0, -50%);
-  background-color: #0a0a0a;
+  background-color: rgba(10, 10, 10, 0.6980392157);
   border-radius: 25px;
+  color: white;
 }
 body .contact {
   width: 100%;
@@ -273,9 +269,6 @@ body .contact .contact-content .contact-bloc h2 {
   background-color: var(--darker-light);
   color: black;
 }
-.light-mode-body .nav-menu ul a {
-  color: black;
-}
 .light-mode-body .about .about-content span {
   border-left: 2px solid rgb(0, 0, 0);
 }
@@ -284,6 +277,36 @@ body .contact .contact-content .contact-bloc h2 {
 }
 .light-mode-body .contact .contact-content .contact-bloc .dark-icons {
   display: unset;
+}
+.light-mode-body .nav-menu ul a {
+  color: var(--darker-blue);
+  color: black;
+}
+.light-mode-body .nav-menu ul a:hover {
+  animation: gradient_darker_cym_data 3s infinite;
+}
+.light-mode-body .about .about-content .about-text a, .light-mode-body .project .project-content .tabcontent .pro-container a, .light-mode-body .contact .contact-content .contact-bloc h1, .light-mode-body .contact .contact-content .contact-bloc a {
+  color: var(--darker-blue);
+}
+.light-mode-body .about .about-content .about-text a:hover, .light-mode-body .project .project-content .tabcontent .pro-container a:hover, .light-mode-body .contact .contact-content .contact-bloc h1:hover, .light-mode-body .contact .contact-content .contact-bloc a:hover {
+  animation: gradient_darker_cym_data 3s infinite;
+}
+.light-mode-body .project .project-content .tab button i {
+  color: black;
+}
+.light-mode-body .project .project-content .tab button:hover i {
+  color: var(--darker-blue);
+  opacity: 0.7;
+}
+.light-mode-body .project .project-content .tab button:hover i:hover {
+  animation: gradient_darker_cym_data 3s infinite;
+}
+.light-mode-body .project .project-content .tab button.active i {
+  color: var(--darker-blue);
+  opacity: 1;
+}
+.light-mode-body .project .project-content .tab button.active i:hover {
+  animation: gradient_darker_cym_data 3s infinite;
 }
 
 .switch {
