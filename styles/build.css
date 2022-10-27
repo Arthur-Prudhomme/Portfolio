@@ -86,7 +86,7 @@ body {
   color: white;
   transition: 0.3s;
 }
-body .home, body .about, body .project {
+body .home, body .about, body .skill, body .project {
   width: 100%;
   height: 100vh;
 }
