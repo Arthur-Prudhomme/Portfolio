@@ -165,18 +165,18 @@ body .project .project-content .tab button {
   font-size: 50px;
   padding: 0 15px;
 }
-body .project .project-content .tab button:hover {
+body .project .project-content .tab button:hover i {
   color: var(--blue);
   opacity: 0.5;
 }
-body .project .project-content .tab button:hover:hover {
+body .project .project-content .tab button:hover i:hover {
   animation: gradient_cym_data 3s infinite;
 }
-body .project .project-content .tab button.active {
+body .project .project-content .tab button.active i {
   color: var(--blue);
   opacity: 1;
 }
-body .project .project-content .tab button.active:hover {
+body .project .project-content .tab button.active i:hover {
   animation: gradient_cym_data 3s infinite;
 }
 body .project .project-content .tabcontent {
