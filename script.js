@@ -20,10 +20,6 @@ function openPage(evt, pageName) {
 }
 
 function toggleLightMode() {
-  var nav_e = document.getElementById("nav");
   var global = document.body;
-  var contact_e = document.getElementById("sc-contacts");
-  nav_e.classList.toggle("light-mode-second");
   global.classList.toggle("light-mode-body");
-  contact_e.classList.toggle("light-mode-second");
 }

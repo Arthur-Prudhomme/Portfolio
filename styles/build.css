@@ -2,10 +2,13 @@
   --bg-dark: #0e0e0f;
   --bg-light: #e7e3e3;
   --darker-dark: #0a0a0a;
-  --darker-light: #bdbdbd;
+  --darker-light: #dbdbdb;
   --blue: #1ad1c5;
   --yellow: #ebd161;
-  --violet: #e26ae2;
+  --magenta: #e26ae2;
+  --red: #b90c23;
+  --violet: #ba09ca;
+  --dark-blue: #441cd3;
 }
 
 * {
@@ -18,7 +21,7 @@
   scroll-behavior: smooth;
 }
 
-@keyframes color-change {
+@keyframes gradient_cym_data {
   0% {
     color: var(--blue);
   }
@@ -26,10 +29,24 @@
     color: var(--yellow);
   }
   80% {
-    color: var(--violet);
+    color: var(--magenta);
   }
   100% {
     color: var(--blue);
+  }
+}
+@keyframes gradient_rvb_data {
+  0% {
+    color: var(--red);
+  }
+  40% {
+    color: var(--violet);
+  }
+  80% {
+    color: var(--dark-blue);
+  }
+  100% {
+    color: var(--red);
   }
 }
 .nav-menu {
@@ -57,51 +74,13 @@
   font-weight: bold;
 }
 .nav-menu ul a:hover {
-  animation: color-change 2s infinite;
+  color: var(--blue);
+}
+.nav-menu ul a:hover:hover {
+  animation: gradient_cym_data 3s infinite;
 }
 .nav-menu img {
   width: 4rem;
-}
-
-.contact {
-  width: 100%;
-  height: 50vh;
-  background-color: var(--darker-dark);
-  color: white;
-  transition: 0.3s;
-}
-.contact .contact-content {
-  position: relative;
-  top: 50%;
-  transform: translate(0, -50%);
-  padding: 50px 40px;
-  display: flex;
-  justify-content: space-between;
-}
-.contact .contact-content .contact-bloc {
-  display: block;
-}
-.contact .contact-content .contact-bloc .light-icons {
-  display: unset;
-}
-.contact .contact-content .contact-bloc .dark-icons {
-  display: none;
-}
-.contact .contact-content .contact-bloc img {
-  width: 50px;
-}
-.contact .contact-content .contact-bloc h1, .contact .contact-content .contact-bloc h2 {
-  text-align: left;
-}
-.contact .contact-content .contact-bloc a, .contact .contact-content .contact-bloc h1 {
-  font-size: 75px;
-  color: #1CD3C8;
-}
-.contact .contact-content .contact-bloc a:hover, .contact .contact-content .contact-bloc h1:hover {
-  animation: color-change 2s infinite;
-}
-.contact .contact-content .contact-bloc h2 {
-  font-size: 30px;
 }
 
 body {
@@ -136,7 +115,10 @@ body .home .home-content ul li h1 {
   color: white;
 }
 body .home .home-content ul li .colored-title {
-  animation: color-change 4s infinite;
+  color: var(--blue);
+}
+body .home .home-content ul li .colored-title:hover {
+  animation: gradient_cym_data 3s infinite;
 }
 body .about .about-content {
   display: flex;
@@ -158,14 +140,14 @@ body .about .about-content .about-text p {
   text-align: left;
 }
 body .about .about-content .about-text a {
-  color: #1CD3C8;
+  color: var(--blue);
   font-size: 30px;
   font-weight: bold;
   display: flex;
   text-align: left;
 }
 body .about .about-content .about-text a:hover {
-  animation: color-change 2s infinite;
+  animation: gradient_cym_data 3s infinite;
 }
 body .project .projet-content {
   display: block;
@@ -189,18 +171,18 @@ body .project .projet-content .tab button {
   padding: 0 15px;
 }
 body .project .projet-content .tab button:hover {
-  color: #1CD3C8;
+  color: var(--blue);
   opacity: 0.5;
 }
 body .project .projet-content .tab button:hover:hover {
-  animation: color-change 2s infinite;
+  animation: gradient_cym_data 3s infinite;
 }
 body .project .projet-content .tab button.active {
-  color: #1CD3C8;
+  color: var(--blue);
   opacity: 1;
 }
 body .project .projet-content .tab button.active:hover {
-  animation: color-change 2s infinite;
+  animation: gradient_cym_data 3s infinite;
 }
 body .project .projet-content .tabcontent {
   display: none;
@@ -216,10 +198,10 @@ body .project .projet-content .pro-container {
 }
 body .project .projet-content .pro-container a {
   text-decoration: none;
-  color: #1CD3C8;
+  color: var(--blue);
 }
 body .project .projet-content .pro-container a:hover {
-  animation: color-change 2s infinite;
+  animation: gradient_cym_data 3s infinite;
 }
 body .project .projet-content .pro-container a .pro {
   width: 100%;
@@ -242,43 +224,65 @@ body .project .projet-content .pro-container a .pro h1 {
   background-color: #0a0a0a;
   border-radius: 25px;
 }
+body .contact {
+  width: 100%;
+  height: 50vh;
+  background-color: var(--darker-dark);
+  color: white;
+  transition: 0.3s;
+}
+body .contact .contact-content {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 50px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+body .contact .contact-content .contact-bloc {
+  display: block;
+}
+body .contact .contact-content .contact-bloc .light-icons {
+  display: unset;
+}
+body .contact .contact-content .contact-bloc .dark-icons {
+  display: none;
+}
+body .contact .contact-content .contact-bloc img {
+  width: 50px;
+}
+body .contact .contact-content .contact-bloc h1, body .contact .contact-content .contact-bloc h2 {
+  text-align: left;
+}
+body .contact .contact-content .contact-bloc a, body .contact .contact-content .contact-bloc h1 {
+  font-size: 75px;
+  color: var(--blue);
+}
+body .contact .contact-content .contact-bloc a:hover, body .contact .contact-content .contact-bloc h1:hover {
+  animation: gradient_cym_data 3s infinite;
+}
+body .contact .contact-content .contact-bloc h2 {
+  font-size: 30px;
+}
 
 .light-mode-body {
   background-color: var(--bg-light);
   color: black;
 }
-.light-mode-body button i {
+.light-mode-body .contact, .light-mode-body .nav-menu {
+  background-color: var(--darker-light);
   color: black;
 }
-.light-mode-body button:hover i {
-  color: #1CD3C8;
-  opacity: 0.5;
-}
-.light-mode-body button:hover i:hover {
-  animation: color-change 2s infinite;
-}
-.light-mode-body button.active i {
-  color: #1CD3C8;
-  opacity: 1;
-}
-.light-mode-body button.active i:hover {
-  animation: color-change 2s infinite;
+.light-mode-body .nav-menu ul a {
+  color: black;
 }
 .light-mode-body .about .about-content span {
   border-left: 2px solid rgb(0, 0, 0);
 }
-
-.light-mode-second {
-  background-color: var(--darker-light);
-  color: black;
-}
-.light-mode-second ul a {
-  color: black;
-}
-.light-mode-second .contact-content .contact-bloc .light-icons {
+.light-mode-body .contact .contact-content .contact-bloc .light-icons {
   display: none;
 }
-.light-mode-second .contact-content .contact-bloc .dark-icons {
+.light-mode-body .contact .contact-content .contact-bloc .dark-icons {
   display: unset;
 }
 

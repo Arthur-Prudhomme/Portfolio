@@ -1,6 +1,13 @@
-@mixin color(){
-    color: #1CD3C8;
+@mixin gradient_cym(){
+    color: var(--blue);
     &:hover{
-        animation: color-change 2s infinite;
+        animation: gradient_cym_data 3s infinite;
+    }
+}
+
+@mixin gradient_rvb(){
+    color: #d31c34;
+    &:hover{
+        animation: gradient_rvb_data 2s infinite;
     }
 }
