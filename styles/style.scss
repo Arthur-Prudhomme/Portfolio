@@ -126,7 +126,11 @@ body{
                 border-radius: 75px;
                 box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
             }
-            .about-text{            
+            .about-text{   
+                background-color: var(--bg-dark);
+                border-radius: 25px;
+                box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);   
+                padding: 15px; 
                 p, h1{
                     width: 500px;
                     text-align: left;
@@ -189,7 +193,7 @@ body{
             top: 50%;
             transform: translate(0, -50%);
             justify-content: center;
-            height: 500px;
+            height: 600px;
             .tab{
                 overflow: hidden;
                 button {

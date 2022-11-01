@@ -18,7 +18,7 @@ To deploy my project I used Vercel by connecting my github account and choosing 
 
 ## If you want to visit it :
 - use one of those :
-  - https://portfolio-arthur-prudhomme-mrh.vercel.app/#sc-about (Vercel)
+  - https://portfolio-arthur-prudhomme-mrh.vercel.app (Vercel)
   - https://arthur-prudhomme.github.io/Portfolio/ (Gitio)
 
 ## What is possible on this repository

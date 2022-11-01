@@ -145,6 +145,12 @@ body .about .about-content img {
   border-radius: 75px;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
 }
+body .about .about-content .about-text {
+  background-color: var(--bg-dark);
+  border-radius: 25px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+}
 body .about .about-content .about-text p, body .about .about-content .about-text h1 {
   width: 500px;
   text-align: left;
@@ -204,7 +210,7 @@ body .project .project-content {
   top: 50%;
   transform: translate(0, -50%);
   justify-content: center;
-  height: 500px;
+  height: 600px;
 }
 body .project .project-content .tab {
   overflow: hidden;
