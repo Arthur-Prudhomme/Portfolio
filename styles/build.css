@@ -135,7 +135,7 @@ body .about .about-content {
   top: 50%;
   transform: translate(0, -50%);
   justify-content: center;
-  height: 60vh;
+  height: 500px;
 }
 body .about .about-content span {
   border-left: 2px solid rgb(255, 255, 255);
@@ -143,20 +143,18 @@ body .about .about-content span {
 }
 body .about .about-content img {
   border-radius: 75px;
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.568627451);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
 }
-body .about .about-content .about-text p {
-  width: 60vh;
+body .about .about-content .about-text p, body .about .about-content .about-text h1 {
+  width: 500px;
   text-align: left;
 }
-body .about .about-content .about-text a {
+body .about .about-content .about-text a, body .about .about-content .about-text h1 {
   color: var(--blue);
   font-size: 30px;
   font-weight: bold;
-  display: flex;
-  text-align: left;
 }
-body .about .about-content .about-text a:hover {
+body .about .about-content .about-text a:hover, body .about .about-content .about-text h1:hover {
   animation: gradient_cym_data 3s infinite;
 }
 body .skill .skill-content {
@@ -165,6 +163,7 @@ body .skill .skill-content {
   position: relative;
   top: 50%;
   transform: translate(0, -50%);
+  gap: 30px;
 }
 body .skill .skill-content .skill-grid {
   display: grid;
@@ -172,17 +171,32 @@ body .skill .skill-content .skill-grid {
   grid-template-rows: repeat(2, 180px);
   gap: 25px;
 }
-body .skill .skill-content .skill-grid div {
-  background-color: #0e0e0f;
+body .skill .skill-content .skill-grid a {
+  text-decoration: none;
+}
+body .skill .skill-content .skill-grid a div {
+  background-color: var(--bg-dark);
   border-radius: 25px;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease 0s;
+  color: white;
 }
-body .skill .skill-content .skill-grid div img {
+body .skill .skill-content .skill-grid a div img {
   width: 100%;
 }
-body .skill .skill-content .skill-grid div:hover {
+body .skill .skill-content .skill-grid a div:hover {
   transform: translateY(-7px);
+}
+body .skill .skill-content .skill-bloc {
+  background-color: #0e0e0f;
+  border-radius: 25px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  transition: all 0.3s ease 0s;
+}
+body .skill .skill-content .skill-bloc p {
+  text-align: left;
+  width: 600px;
 }
 body .project .project-content {
   display: block;
@@ -190,7 +204,7 @@ body .project .project-content {
   top: 50%;
   transform: translate(0, -50%);
   justify-content: center;
-  height: 60vh;
+  height: 500px;
 }
 body .project .project-content .tab {
   overflow: hidden;
@@ -229,7 +243,7 @@ body .project .project-content .pro-container {
   grid-template-rows: repeat(2, 220px);
   position: relative;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
 }
 body .project .project-content .pro-container a {
   text-decoration: none;
@@ -243,6 +257,7 @@ body .project .project-content .pro-container a .pro {
   background-repeat: no-repeat;
   border-radius: 25px;
   transition: all 0.3s ease 0s;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.8);
 }
 body .project .project-content .pro-container a .pro:hover {
   transform: translateY(-7px);
@@ -283,6 +298,10 @@ body .contact .contact-content .contact-bloc .dark-icons {
 }
 body .contact .contact-content .contact-bloc img {
   width: 50px;
+  transition: all 0.3s ease 0s;
+}
+body .contact .contact-content .contact-bloc img:hover {
+  transform: translateY(-7px);
 }
 body .contact .contact-content .contact-bloc h1, body .contact .contact-content .contact-bloc h2 {
   text-align: left;
@@ -310,7 +329,13 @@ body .contact .contact-content .contact-bloc h2 {
   border-left: 2px solid rgb(0, 0, 0);
 }
 .light-mode-body .skill .skill-content .skill-grid div {
-  background-color: var(--darker-light);
+  background-color: var(--bg-light);
+}
+.light-mode-body .skill .skill-content .skill-grid div a, .light-mode-body .skill .skill-content .skill-grid div h3 {
+  color: black;
+}
+.light-mode-body .skill .skill-content .skill-bloc {
+  background-color: var(--bg-light);
 }
 .light-mode-body .contact .contact-content .contact-bloc .light-icons {
   display: none;
@@ -325,10 +350,10 @@ body .contact .contact-content .contact-bloc h2 {
 .light-mode-body .nav-menu ul a:hover {
   animation: gradient_darker_cym_data 3s infinite;
 }
-.light-mode-body .about .about-content .about-text a, .light-mode-body .project .project-content .tabcontent .pro-container a, .light-mode-body .contact .contact-content .contact-bloc h1, .light-mode-body .contact .contact-content .contact-bloc a {
+.light-mode-body .about .about-content .about-text a, .light-mode-body .about .about-content .about-text h1, .light-mode-body .project .project-content .tabcontent .pro-container a, .light-mode-body .contact .contact-content .contact-bloc h1, .light-mode-body .contact .contact-content .contact-bloc a {
   color: var(--darker-blue);
 }
-.light-mode-body .about .about-content .about-text a:hover, .light-mode-body .project .project-content .tabcontent .pro-container a:hover, .light-mode-body .contact .contact-content .contact-bloc h1:hover, .light-mode-body .contact .contact-content .contact-bloc a:hover {
+.light-mode-body .about .about-content .about-text a:hover, .light-mode-body .about .about-content .about-text h1:hover, .light-mode-body .project .project-content .tabcontent .pro-container a:hover, .light-mode-body .contact .contact-content .contact-bloc h1:hover, .light-mode-body .contact .contact-content .contact-bloc a:hover {
   animation: gradient_darker_cym_data 3s infinite;
 }
 .light-mode-body .project .project-content .tab button i {
@@ -388,7 +413,7 @@ body .contact .contact-content .contact-bloc h2 {
   background: rgb(0, 0, 0);
   border-radius: 50%;
   transform: translateY(-50%);
-  transition: all 0.3s;
+  transition: all 0.3s ease 0s;
 }
 .switch input:checked + span:before {
   left: 28px;

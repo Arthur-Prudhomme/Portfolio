@@ -117,26 +117,24 @@ body{
             top: 50%;
             transform: translate(0, -50%);
             justify-content: center;
-            height: 60vh;
+            height: 500px;
             span{
                 border-left: 2px solid rgb(255, 255, 255);
                 margin: 0 50px
             }
             img{
                 border-radius: 75px;
-                box-shadow: 5px 5px 15px 5px #00000091;
+                box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
             }
             .about-text{            
-                p{
-                    width: 60vh;
+                p, h1{
+                    width: 500px;
                     text-align: left;
                 }
-                a{
+                a, h1{
                     @include mixins.gradient_cym;
                     font-size: 30px;
                     font-weight: bold;
-                    display: flex;
-                    text-align: left;
                 }
             }
         }
@@ -148,22 +146,38 @@ body{
             position: relative;
             top: 50%;
             transform: translate(0, -50%);
+            gap: 30px;
             .skill-grid{
                 display: grid;
                 grid-template-columns: repeat(3, 150px);
                 grid-template-rows: repeat(2, 180px);
                 gap: 25px;
-                div{
-                    background-color: #0e0e0f;
-                    border-radius: 25px;
-                    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
-                    transition: all 0.3s ease 0s;
-                    img{
-                        width: 100%;
+                a{
+                    text-decoration: none;
+                    div{
+                        background-color: var(--bg-dark);
+                        border-radius: 25px;
+                        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+                        transition: all 0.3s ease 0s;
+                        color: white;
+                        img{
+                            width: 100%;
+                        }
+                        &:hover{
+                            transform: translateY(-7px);
+                        }
                     }
-                    &:hover{
-                        transform: translateY(-7px);
-                    }
+                }
+            }
+            .skill-bloc{
+                background-color: #0e0e0f;
+                border-radius: 25px;
+                box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+                padding: 15px;
+                transition: all 0.3s ease 0s;
+                p{
+                    text-align: left;
+                    width: 600px;
                 }
             }
         }
@@ -175,7 +189,7 @@ body{
             top: 50%;
             transform: translate(0, -50%);
             justify-content: center;
-            height: 60vh;
+            height: 500px;
             .tab{
                 overflow: hidden;
                 button {
@@ -207,7 +221,7 @@ body{
                 grid-template-rows: repeat(2, 220px);
                 position: relative;
                 justify-content: center;
-                gap: 20px;
+                gap: 25px;
                 a{
                     text-decoration: none;
                     .pro{
@@ -219,6 +233,7 @@ body{
                         background-repeat: no-repeat;
                         border-radius: 25px;
                         transition: all 0.3s ease 0s;
+                        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.8);
                         &:hover{
                             transform: translateY(-7px);
                         }
@@ -260,6 +275,10 @@ body{
                 }
                 img{
                     width: 50px;
+                    transition: all 0.3s ease 0s;
+                    &:hover{
+                        transform: translateY(-7px);
+                    }
                 }
                 h1,h2{
                     text-align: left;
@@ -294,8 +313,14 @@ body{
         .skill-content{
             .skill-grid{
                 div{
-                    background-color: var(--darker-light);
+                    background-color: var(--bg-light);
+                    a, h3{
+                        color: black;
+                    }
                 }
+            }
+            .skill-bloc{
+                background-color: var(--bg-light);
             }
         }
     }
@@ -315,7 +340,7 @@ body{
         @include mixins.gradient_darker_cym;
         color: black;
     }
-    .about .about-content .about-text a, .project .project-content .tabcontent .pro-container a, .contact .contact-content .contact-bloc h1, .contact .contact-content .contact-bloc a{
+    .about .about-content .about-text a, .about .about-content .about-text h1, .project .project-content .tabcontent .pro-container a, .contact .contact-content .contact-bloc h1, .contact .contact-content .contact-bloc a{
         @include mixins.gradient_darker_cym;
     }
     .project .project-content .tab button i{
@@ -373,7 +398,7 @@ body{
         background: rgb(0, 0, 0);
         border-radius: 50%;
         transform: translateY(-50%);
-        transition: all .3s;
+        transition: all 0.3s ease 0s;
     }
     input:checked + span:before {
         left: 28px;
