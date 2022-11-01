@@ -49,6 +49,20 @@
     color: var(--darker-blue);
   }
 }
+@keyframes shadow-cym {
+  0% {
+    background-color: var(--blue);
+  }
+  40% {
+    background-color: var(--yellow);
+  }
+  80% {
+    background-color: var(--magenta);
+  }
+  100% {
+    background-color: var(--blue);
+  }
+}
 .nav-menu {
   background: var(--darker-dark);
   transition: 0.3s;
@@ -129,6 +143,7 @@ body .about .about-content span {
 }
 body .about .about-content img {
   border-radius: 75px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.568627451);
 }
 body .about .about-content .about-text p {
   width: 60vh;
@@ -143,6 +158,31 @@ body .about .about-content .about-text a {
 }
 body .about .about-content .about-text a:hover {
   animation: gradient_cym_data 3s infinite;
+}
+body .skill .skill-content {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+body .skill .skill-content .skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(2, 180px);
+  gap: 25px;
+}
+body .skill .skill-content .skill-grid div {
+  background-color: #0e0e0f;
+  border-radius: 25px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease 0s;
+}
+body .skill .skill-content .skill-grid div img {
+  width: 100%;
+}
+body .skill .skill-content .skill-grid div:hover {
+  transform: translateY(-7px);
 }
 body .project .project-content {
   display: block;
@@ -189,14 +229,10 @@ body .project .project-content .pro-container {
   grid-template-rows: repeat(2, 220px);
   position: relative;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
 }
 body .project .project-content .pro-container a {
   text-decoration: none;
-  color: var(--blue);
-}
-body .project .project-content .pro-container a:hover {
-  animation: gradient_cym_data 3s infinite;
 }
 body .project .project-content .pro-container a .pro {
   width: 100%;
@@ -206,9 +242,10 @@ body .project .project-content .pro-container a .pro {
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 25px;
+  transition: all 0.3s ease 0s;
 }
 body .project .project-content .pro-container a .pro:hover {
-  opacity: 0.5;
+  transform: translateY(-7px);
 }
 body .project .project-content .pro-container a .pro h1 {
   font-size: 50px;
@@ -271,6 +308,9 @@ body .contact .contact-content .contact-bloc h2 {
 }
 .light-mode-body .about .about-content span {
   border-left: 2px solid rgb(0, 0, 0);
+}
+.light-mode-body .skill .skill-content .skill-grid div {
+  background-color: var(--darker-light);
 }
 .light-mode-body .contact .contact-content .contact-bloc .light-icons {
   display: none;

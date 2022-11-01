@@ -37,6 +37,13 @@
     100% { color: var(--darker-blue); }
 }
 
+@keyframes shadow-cym {
+    0% { background-color : var(--blue); }
+    40% { background-color : var(--yellow); }
+    80% { background-color : var(--magenta); }
+    100% { background-color : var(--blue); }
+}
+
 .nav-menu{
     background: var(--darker-dark);
     transition: 0.3s;
@@ -117,6 +124,7 @@ body{
             }
             img{
                 border-radius: 75px;
+                box-shadow: 5px 5px 15px 5px #00000091;
             }
             .about-text{            
                 p{
@@ -129,6 +137,33 @@ body{
                     font-weight: bold;
                     display: flex;
                     text-align: left;
+                }
+            }
+        }
+    }
+    .skill{
+        .skill-content{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 50%;
+            transform: translate(0, -50%);
+            .skill-grid{
+                display: grid;
+                grid-template-columns: repeat(3, 150px);
+                grid-template-rows: repeat(2, 180px);
+                gap: 25px;
+                div{
+                    background-color: #0e0e0f;
+                    border-radius: 25px;
+                    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+                    transition: all 0.3s ease 0s;
+                    img{
+                        width: 100%;
+                    }
+                    &:hover{
+                        transform: translateY(-7px);
+                    }
                 }
             }
         }
@@ -172,10 +207,9 @@ body{
                 grid-template-rows: repeat(2, 220px);
                 position: relative;
                 justify-content: center;
-                gap: 10px;
+                gap: 20px;
                 a{
                     text-decoration: none;
-                    @include mixins.gradient_cym;
                     .pro{
                         width: 100%;
                         height: 100%;
@@ -184,8 +218,9 @@ body{
                         background-size: cover;
                         background-repeat: no-repeat;
                         border-radius: 25px;
+                        transition: all 0.3s ease 0s;
                         &:hover{
-                            opacity: 0.5;
+                            transform: translateY(-7px);
                         }
                         h1{
                             font-size: 50px;
@@ -252,6 +287,15 @@ body{
         .about-content{
             span{
                 border-left: 2px solid rgb(0, 0, 0);
+            }
+        }
+    }
+    .skill{
+        .skill-content{
+            .skill-grid{
+                div{
+                    background-color: var(--darker-light);
+                }
             }
         }
     }
