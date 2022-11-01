@@ -76,6 +76,10 @@
   height: 90px;
   z-index: 1;
 }
+.nav-menu div {
+  display: flex;
+  gap: 1rem;
+}
 .nav-menu ul {
   display: flex;
   list-style: none;
@@ -111,7 +115,7 @@ body .home .home-content {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  box-shadow: inset 40vw 0rem 5vw rgba(0, 0, 0, 0.4);
+  box-shadow: inset 500px 0rem 5vw rgba(0, 0, 0, 0.4);
 }
 body .home .home-content ul {
   margin-left: 80px;
@@ -142,6 +146,7 @@ body .about .about-content span {
   margin: 0 50px;
 }
 body .about .about-content img {
+  height: 500px;
   border-radius: 75px;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
 }
@@ -150,9 +155,9 @@ body .about .about-content .about-text {
   border-radius: 25px;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
   padding: 15px;
+  width: 500px;
 }
 body .about .about-content .about-text p, body .about .about-content .about-text h1 {
-  width: 500px;
   text-align: left;
 }
 body .about .about-content .about-text a, body .about .about-content .about-text h1 {
@@ -202,7 +207,7 @@ body .skill .skill-content .skill-bloc {
 }
 body .skill .skill-content .skill-bloc p {
   text-align: left;
-  width: 600px;
+  width: 550px;
 }
 body .project .project-content {
   display: block;
@@ -424,6 +429,85 @@ body .contact .contact-content .contact-bloc h2 {
 .switch input:checked + span:before {
   left: 28px;
   background: #ffffff;
+}
+
+@media screen and (max-width: 1180px) {
+  body .about .about-content {
+    display: block;
+    margin: 0 auto 0 auto;
+    width: 500px;
+    padding-block: 10px;
+  }
+  body .about .about-content span {
+    display: none;
+  }
+  body .about .about-content img {
+    height: 300px;
+    margin-bottom: 15px;
+  }
+  body .skill .skill-content {
+    display: block;
+    margin: 0 auto 0 auto;
+    width: 500px;
+  }
+  body .skill .skill-content .skill-bloc {
+    margin-top: 15px;
+    width: 500px;
+  }
+  body .skill .skill-content .skill-bloc p {
+    width: 450px;
+  }
+  body .project .project-content .pro-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 750px) {
+  body .contact .contact-content {
+    display: block;
+  }
+  body .contact .contact-content .contact-bloc {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 750px) and (max-width: 610px) {
+  body .contact .contact-content .contact-bloc a, body .contact .contact-content .contact-bloc h1 {
+    font-size: 50px;
+    margin: 20px 0 20px 0;
+  }
+  body .contact .contact-content .contact-bloc h2 {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 580px) {
+  body .home .home-content {
+    box-shadow: inset 1000px 0rem 5vw rgba(0, 0, 0, 0.4);
+  }
+  body .home .home-content ul {
+    margin-left: 0;
+  }
+  body .home .home-content ul li h1 {
+    text-align: center;
+    font-size: 17vw;
+  }
+  body .about .about-content {
+    width: 95%;
+  }
+  body .about .about-content .about-text {
+    width: 100%;
+  }
+  body .skill .skill-content {
+    width: 95%;
+  }
+  body .skill .skill-content .skill-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  body .skill .skill-content .skill-bloc {
+    transition: none;
+    width: 100%;
+  }
+  body .skill .skill-content .skill-bloc p {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=build.css.map */

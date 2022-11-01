@@ -56,6 +56,10 @@
     width: 100%;
     height: 90px;
     z-index: 1;
+    div{
+        display: flex;
+        gap: 1rem;
+    }
     ul{
         display: flex;
         list-style: none;
@@ -89,7 +93,7 @@ body{
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-            box-shadow: inset 40vw 0rem 5vw rgba(0,0,0,0.4);
+            box-shadow: inset 500px 0rem 5vw rgba(0,0,0,0.4);
             ul{
                 margin-left: 80px;
                 position: relative;
@@ -123,6 +127,7 @@ body{
                 margin: 0 50px
             }
             img{
+                height: 500px;
                 border-radius: 75px;
                 box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
             }
@@ -131,8 +136,8 @@ body{
                 border-radius: 25px;
                 box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);   
                 padding: 15px; 
+                width: 500px;
                 p, h1{
-                    width: 500px;
                     text-align: left;
                 }
                 a, h1{
@@ -181,7 +186,7 @@ body{
                 transition: all 0.3s ease 0s;
                 p{
                     text-align: left;
-                    width: 600px;
+                    width: 550px;
                 }
             }
         }
@@ -407,5 +412,108 @@ body{
     input:checked + span:before {
         left: 28px;
         background: #ffffff;
+    }
+}
+
+@media screen and (max-width : 1180px){
+    body{
+        .about{
+            .about-content{
+                display: block;
+                margin: 0 auto 0 auto;
+                width: 500px;
+                padding-block: 10px;
+                span{
+                    display: none;
+                }
+                img{
+                    height: 300px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .skill{
+            .skill-content{
+                display: block;
+                margin: 0 auto 0 auto;
+                width: 500px;
+                .skill-bloc{
+                    margin-top: 15px;
+                    width: 500px;
+                    p{
+                        width: 450px;
+                    }
+                }
+            }
+        }
+        .project{
+            .project-content{
+                .pro-container{
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width : 750px){
+    body{
+        .contact{
+            .contact-content{
+                display: block;
+                .contact-bloc{
+                    text-align: left;
+                    @media screen and (max-width : 610px){
+                        a, h1{
+                            font-size: 50px;
+                            margin: 20px 0 20px 0;
+                        }
+                        h2{
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width : 580px){
+    body{
+        .home{
+            .home-content{
+                box-shadow: inset 1000px 0rem 5vw rgba(0,0,0,0.4);
+                ul{
+                    margin-left: 0;
+                    li{
+                        h1{
+                            text-align: center;
+                            font-size: 17vw;
+                        }
+                    }
+                }
+            }
+        }
+        .about{
+            .about-content{
+                width: 95%;
+                .about-text{
+                    width: 100%;
+                }
+            }
+        }
+        .skill{
+            .skill-content{
+                width: 95%;
+                .skill-grid{
+                    grid-template-columns: repeat(3, 1fr);
+                }
+                .skill-bloc{
+                    transition: none;
+                    width: 100%;
+                    p{
+                        width: 100%;
+                    }
+                }
+            }
+        }
     }
 }
