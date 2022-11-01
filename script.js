@@ -23,3 +23,12 @@ function toggleLightMode() {
   var global = document.body;
   global.classList.toggle("light-mode-body");
 }
+
+var burgerMenu = document.getElementById('burger-menu');
+
+var overlay = document.getElementById('menu');
+
+burgerMenu.addEventListener('click', function() {
+  this.classList.toggle("close");
+  overlay.classList.toggle("overlay");
+});
