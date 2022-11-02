@@ -131,6 +131,9 @@
         font-size: 25px;
         margin-bottom: 30px;
         text-decoration: none;
+        &:hover{
+            animation: gradient_cym_data 3s infinite;
+        }
     }
 }
 
@@ -227,6 +230,7 @@ body{
                 box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);   
                 padding: 15px; 
                 width: 500px;
+                transition: 0.3s ease 0s;
                 p, h1{
                     text-align: left;
                 }
@@ -257,7 +261,7 @@ body{
                         background-color: var(--bg-dark);
                         border-radius: 25px;
                         box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
-                        transition: all 0.3s ease 0s;
+                        transition: 0.3s ease 0s;
                         color: white;
                         img{
                             width: 100%;
@@ -273,7 +277,7 @@ body{
                 border-radius: 25px;
                 box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
                 padding: 15px;
-                transition: all 0.3s ease 0s;
+                transition: 0.3s ease 0s;
                 p{
                     text-align: left;
                     width: 550px;
@@ -331,7 +335,7 @@ body{
                         background-size: cover;
                         background-repeat: no-repeat;
                         border-radius: 25px;
-                        transition: all 0.3s ease 0s;
+                        transition: 0.3s ease 0s;
                         box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.8);
                         &:hover{
                             transform: translateY(-7px);
@@ -374,7 +378,7 @@ body{
                 }
                 img{
                     width: 50px;
-                    transition: all 0.3s ease 0s;
+                    transition: 0.3s ease 0s;
                     &:hover{
                         transform: translateY(-7px);
                     }
@@ -397,6 +401,24 @@ body{
 .light-mode-body {
     background-color: var(--bg-light);
     color: black;
+    #burger-menu{
+        span,
+        span:before,
+        span:after {
+            background: black;
+        }
+    }
+    #menu {
+        &.overlay {
+            background: var(--darker-light);
+        }
+        a{
+            color: black;
+            &:hover{
+                animation: gradient_darker_cym_data 3s infinite;
+            }
+        }
+    }
     .contact, .nav-menu{
         background-color: var(--darker-light);
         color: black;
@@ -405,6 +427,9 @@ body{
         .about-content{
             span{
                 border-left: 2px solid rgb(0, 0, 0);
+            }
+            .about-text{
+                background-color: var(--bg-light);
             }
         }
     }

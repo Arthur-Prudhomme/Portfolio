@@ -150,6 +150,9 @@
   margin-bottom: 30px;
   text-decoration: none;
 }
+#menu a:hover {
+  animation: gradient_cym_data 3s infinite;
+}
 
 .nav-menu {
   background: var(--darker-dark);
@@ -244,6 +247,7 @@ body .about .about-content .about-text {
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
   padding: 15px;
   width: 500px;
+  transition: 0.3s ease 0s;
 }
 body .about .about-content .about-text p, body .about .about-content .about-text h1 {
   text-align: left;
@@ -277,7 +281,7 @@ body .skill .skill-content .skill-grid a div {
   background-color: var(--bg-dark);
   border-radius: 25px;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease 0s;
+  transition: 0.3s ease 0s;
   color: white;
 }
 body .skill .skill-content .skill-grid a div img {
@@ -291,7 +295,7 @@ body .skill .skill-content .skill-bloc {
   border-radius: 25px;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
   padding: 15px;
-  transition: all 0.3s ease 0s;
+  transition: 0.3s ease 0s;
 }
 body .skill .skill-content .skill-bloc p {
   text-align: left;
@@ -355,7 +359,7 @@ body .project .project-content .pro-container a .pro {
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 25px;
-  transition: all 0.3s ease 0s;
+  transition: 0.3s ease 0s;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.8);
 }
 body .project .project-content .pro-container a .pro:hover {
@@ -397,7 +401,7 @@ body .contact .contact-content .contact-bloc .dark-icons {
 }
 body .contact .contact-content .contact-bloc img {
   width: 50px;
-  transition: all 0.3s ease 0s;
+  transition: 0.3s ease 0s;
 }
 body .contact .contact-content .contact-bloc img:hover {
   transform: translateY(-7px);
@@ -420,12 +424,29 @@ body .contact .contact-content .contact-bloc h2 {
   background-color: var(--bg-light);
   color: black;
 }
+.light-mode-body #burger-menu span,
+.light-mode-body #burger-menu span:before,
+.light-mode-body #burger-menu span:after {
+  background: black;
+}
+.light-mode-body #menu.overlay {
+  background: var(--darker-light);
+}
+.light-mode-body #menu a {
+  color: black;
+}
+.light-mode-body #menu a:hover {
+  animation: gradient_darker_cym_data 3s infinite;
+}
 .light-mode-body .contact, .light-mode-body .nav-menu {
   background-color: var(--darker-light);
   color: black;
 }
 .light-mode-body .about .about-content span {
   border-left: 2px solid rgb(0, 0, 0);
+}
+.light-mode-body .about .about-content .about-text {
+  background-color: var(--bg-light);
 }
 .light-mode-body .skill .skill-content .skill-grid div {
   background-color: var(--bg-light);
