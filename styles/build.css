@@ -171,23 +171,24 @@
   display: flex;
   gap: 1rem;
 }
-.nav-menu .menu {
+.nav-menu img {
+  width: 4rem;
+}
+
+.menu {
   display: flex;
   list-style: none;
   gap: 3rem;
 }
-.nav-menu .menu a {
+.menu a {
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
   color: var(--blue);
   color: white;
 }
-.nav-menu .menu a:hover {
+.menu a:hover {
   animation: gradient_cym_data 3s infinite;
-}
-.nav-menu img {
-  width: 4rem;
 }
 
 body {
@@ -195,11 +196,13 @@ body {
   color: white;
   transition: 0.3s;
 }
-body .home, body .about, body .skill, body .project {
+
+.home, .about, .skill, .project {
   width: 100%;
   height: 1000px;
 }
-body .home .home-content {
+
+.home-content {
   width: 100%;
   height: 100%;
   background: url("../imgs/accueil.jpg");
@@ -208,7 +211,7 @@ body .home .home-content {
   background-repeat: no-repeat;
   box-shadow: inset 500px 0rem 5vw rgba(0, 0, 0, 0.4);
 }
-body .home .home-content ul {
+.home-content ul {
   margin-left: 80px;
   position: relative;
   top: 50%;
@@ -216,15 +219,17 @@ body .home .home-content ul {
   left: 0;
   list-style: none;
 }
-body .home .home-content ul li h1 {
+.home-content ul li h1 {
   font-size: 100px;
   text-align: left;
   color: white;
 }
-body .home .home-content ul li .colored-title {
+
+.colored-title {
   animation: gradient_cym_data 4s infinite;
 }
-body .about .about-content {
+
+.about-content {
   display: flex;
   position: relative;
   top: 50%;
@@ -232,35 +237,38 @@ body .about .about-content {
   justify-content: center;
   height: 500px;
 }
-body .about .about-content span {
+.about-content span {
   border-left: 2px solid rgb(255, 255, 255);
   margin: 0 50px;
 }
-body .about .about-content img {
-  height: 500px;
-  border-radius: 75px;
+.about-content img, .about-content .about-text {
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
 }
-body .about .about-content .about-text {
+.about-content img {
+  height: 500px;
+  border-radius: 75px;
+}
+
+.about-text {
   background-color: var(--bg-dark);
   border-radius: 25px;
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
   padding: 15px;
   width: 500px;
   transition: 0.3s ease 0s;
 }
-body .about .about-content .about-text p, body .about .about-content .about-text h1 {
+.about-text p, .about-text h1 {
   text-align: left;
 }
-body .about .about-content .about-text a, body .about .about-content .about-text h1 {
+.about-text a, .about-text h1 {
   color: var(--blue);
   font-size: 30px;
   font-weight: bold;
 }
-body .about .about-content .about-text a:hover, body .about .about-content .about-text h1:hover {
+.about-text a:hover, .about-text h1:hover {
   animation: gradient_cym_data 3s infinite;
 }
-body .skill .skill-content {
+
+.skill-content {
   display: flex;
   justify-content: center;
   position: relative;
@@ -268,40 +276,43 @@ body .skill .skill-content {
   transform: translate(0, -50%);
   gap: 30px;
 }
-body .skill .skill-content .skill-grid {
+
+.skill-grid {
   display: grid;
   grid-template-columns: repeat(3, 150px);
   grid-template-rows: repeat(2, 180px);
   gap: 25px;
 }
-body .skill .skill-content .skill-grid a {
+.skill-grid a {
   text-decoration: none;
 }
-body .skill .skill-content .skill-grid a div {
+.skill-grid a div {
   background-color: var(--bg-dark);
   border-radius: 25px;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
   transition: 0.3s ease 0s;
   color: white;
 }
-body .skill .skill-content .skill-grid a div img {
+.skill-grid a div img {
   width: 100%;
 }
-body .skill .skill-content .skill-grid a div:hover {
+.skill-grid a div:hover {
   transform: translateY(-7px);
 }
-body .skill .skill-content .skill-bloc {
+
+.skill-bloc {
   background-color: #0e0e0f;
   border-radius: 25px;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
   padding: 15px;
   transition: 0.3s ease 0s;
 }
-body .skill .skill-content .skill-bloc p {
+.skill-bloc p {
   text-align: left;
   width: 550px;
 }
-body .project .project-content {
+
+.project-content {
   display: block;
   position: relative;
   top: 50%;
@@ -309,10 +320,11 @@ body .project .project-content {
   justify-content: center;
   height: 600px;
 }
-body .project .project-content .tab {
+
+.tab {
   overflow: hidden;
 }
-body .project .project-content .tab button {
+.tab button {
   background-color: inherit;
   border: none;
   outline: none;
@@ -322,25 +334,27 @@ body .project .project-content .tab button {
   font-size: 50px;
   padding: 0 15px;
 }
-body .project .project-content .tab button:hover i {
+.tab button:hover i {
   color: var(--blue);
   opacity: 0.5;
 }
-body .project .project-content .tab button:hover i:hover {
+.tab button:hover i:hover {
   animation: gradient_cym_data 3s infinite;
 }
-body .project .project-content .tab button.active i {
+.tab button.active i {
   color: var(--blue);
   opacity: 1;
 }
-body .project .project-content .tab button.active i:hover {
+.tab button.active i:hover {
   animation: gradient_cym_data 3s infinite;
 }
-body .project .project-content .tabcontent {
+
+.tabcontent {
   display: none;
   padding: 6px 12px;
 }
-body .project .project-content .pro-container {
+
+.pro-container {
   display: grid;
   grid-template-columns: repeat(3, 350px);
   grid-template-rows: repeat(2, 220px);
@@ -348,10 +362,11 @@ body .project .project-content .pro-container {
   justify-content: center;
   gap: 25px;
 }
-body .project .project-content .pro-container a {
+.pro-container a {
   text-decoration: none;
 }
-body .project .project-content .pro-container a .pro {
+
+.pro {
   width: 100%;
   height: 100%;
   background: url("../imgs/accueil.jpg");
@@ -360,12 +375,12 @@ body .project .project-content .pro-container a .pro {
   background-repeat: no-repeat;
   border-radius: 25px;
   transition: 0.3s ease 0s;
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.8);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
 }
-body .project .project-content .pro-container a .pro:hover {
+.pro:hover {
   transform: translateY(-7px);
 }
-body .project .project-content .pro-container a .pro h1 {
+.pro h1 {
   font-size: 50px;
   text-align: center;
   position: relative;
@@ -375,14 +390,16 @@ body .project .project-content .pro-container a .pro h1 {
   border-radius: 25px;
   color: white;
 }
-body .contact {
+
+.contact {
   width: 100%;
   height: 500px;
   background-color: var(--darker-dark);
   color: white;
   transition: 0.3s;
 }
-body .contact .contact-content {
+
+.contact-content {
   position: relative;
   top: 50%;
   transform: translate(0, -50%);
@@ -390,39 +407,43 @@ body .contact .contact-content {
   display: flex;
   justify-content: space-between;
 }
-body .contact .contact-content .contact-bloc {
+
+.contact-bloc {
   display: block;
 }
-body .contact .contact-content .contact-bloc .light-icons {
+.contact-bloc .light-icons {
   display: unset;
 }
-body .contact .contact-content .contact-bloc .dark-icons {
+.contact-bloc .dark-icons {
   display: none;
 }
-body .contact .contact-content .contact-bloc img {
+.contact-bloc img {
   width: 50px;
   transition: 0.3s ease 0s;
 }
-body .contact .contact-content .contact-bloc img:hover {
+.contact-bloc img:hover {
   transform: translateY(-7px);
 }
-body .contact .contact-content .contact-bloc h1, body .contact .contact-content .contact-bloc h2 {
+.contact-bloc h1, .contact-bloc h2 {
   text-align: left;
 }
-body .contact .contact-content .contact-bloc a, body .contact .contact-content .contact-bloc h1 {
+.contact-bloc a, .contact-bloc h1 {
   font-size: 75px;
   color: var(--blue);
 }
-body .contact .contact-content .contact-bloc a:hover, body .contact .contact-content .contact-bloc h1:hover {
+.contact-bloc a:hover, .contact-bloc h1:hover {
   animation: gradient_cym_data 3s infinite;
 }
-body .contact .contact-content .contact-bloc h2 {
+.contact-bloc h2 {
   font-size: 30px;
 }
 
 .light-mode-body {
   background-color: var(--bg-light);
   color: black;
+}
+.light-mode-body .skill-bloc, .light-mode-body .skill-grid a div, .light-mode-body .about-content img, .light-mode-body .about-text {
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
 }
 .light-mode-body #burger-menu span,
 .light-mode-body #burger-menu span:before,
@@ -442,25 +463,25 @@ body .contact .contact-content .contact-bloc h2 {
   background-color: var(--darker-light);
   color: black;
 }
-.light-mode-body .about .about-content span {
+.light-mode-body .about-content span {
   border-left: 2px solid rgb(0, 0, 0);
 }
-.light-mode-body .about .about-content .about-text {
+.light-mode-body .about-text {
   background-color: var(--bg-light);
 }
-.light-mode-body .skill .skill-content .skill-grid div {
+.light-mode-body .skill-grid div {
   background-color: var(--bg-light);
 }
-.light-mode-body .skill .skill-content .skill-grid div a, .light-mode-body .skill .skill-content .skill-grid div h3 {
+.light-mode-body .skill-grid div a, .light-mode-body .skill-grid div h3 {
   color: black;
 }
-.light-mode-body .skill .skill-content .skill-bloc {
+.light-mode-body .skill-bloc {
   background-color: var(--bg-light);
 }
-.light-mode-body .contact .contact-content .contact-bloc .light-icons {
+.light-mode-body .contact-bloc .light-icons {
   display: none;
 }
-.light-mode-body .contact .contact-content .contact-bloc .dark-icons {
+.light-mode-body .contact-bloc .dark-icons {
   display: unset;
 }
 .light-mode-body .nav-menu ul a {
@@ -470,27 +491,27 @@ body .contact .contact-content .contact-bloc h2 {
 .light-mode-body .nav-menu ul a:hover {
   animation: gradient_darker_cym_data 3s infinite;
 }
-.light-mode-body .about .about-content .about-text a, .light-mode-body .about .about-content .about-text h1, .light-mode-body .project .project-content .tabcontent .pro-container a, .light-mode-body .contact .contact-content .contact-bloc h1, .light-mode-body .contact .contact-content .contact-bloc a {
+.light-mode-body .about-text a, .light-mode-body .about-text h1, .light-mode-body .pro-container a, .light-mode-body .contact-bloc h1, .light-mode-body .contact-bloc a {
   color: var(--darker-blue);
 }
-.light-mode-body .about .about-content .about-text a:hover, .light-mode-body .about .about-content .about-text h1:hover, .light-mode-body .project .project-content .tabcontent .pro-container a:hover, .light-mode-body .contact .contact-content .contact-bloc h1:hover, .light-mode-body .contact .contact-content .contact-bloc a:hover {
+.light-mode-body .about-text a:hover, .light-mode-body .about-text h1:hover, .light-mode-body .pro-container a:hover, .light-mode-body .contact-bloc h1:hover, .light-mode-body .contact-bloc a:hover {
   animation: gradient_darker_cym_data 3s infinite;
 }
-.light-mode-body .project .project-content .tab button i {
+.light-mode-body .tab button i {
   color: black;
 }
-.light-mode-body .project .project-content .tab button:hover i {
+.light-mode-body .tab button:hover i {
   color: var(--darker-blue);
   opacity: 0.7;
 }
-.light-mode-body .project .project-content .tab button:hover i:hover {
+.light-mode-body .tab button:hover i:hover {
   animation: gradient_darker_cym_data 3s infinite;
 }
-.light-mode-body .project .project-content .tab button.active i {
+.light-mode-body .tab button.active i {
   color: var(--darker-blue);
   opacity: 1;
 }
-.light-mode-body .project .project-content .tab button.active i:hover {
+.light-mode-body .tab button.active i:hover {
   animation: gradient_darker_cym_data 3s infinite;
 }
 
@@ -544,86 +565,83 @@ body .contact .contact-content .contact-bloc h2 {
   #burger-menu {
     display: unset;
   }
-  body .nav-menu {
+  .nav-menu {
     padding: 0;
   }
-  body .nav-menu .menu {
+  .menu {
     display: none;
   }
-  body .about .about-content {
+  .about-content {
     display: block;
     margin: 0 auto 0 auto;
     width: 500px;
     padding-block: 10px;
   }
-  body .about .about-content span {
+  .about-content span {
     display: none;
   }
-  body .about .about-content img {
+  .about-content img {
     height: 300px;
     margin-bottom: 15px;
   }
-  body .skill .skill-content {
+  .skill-content {
     display: block;
     margin: 0 auto 0 auto;
     width: 500px;
   }
-  body .skill .skill-content .skill-bloc {
+  .skill-bloc {
     margin-top: 15px;
     width: 500px;
   }
-  body .skill .skill-content .skill-bloc p {
+  .skill-bloc p {
     width: 450px;
   }
-  body .project .project-content .pro-container {
+  .pro-container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media screen and (max-width: 750px) {
-  body .contact .contact-content {
-    display: block;
-  }
-  body .contact .contact-content .contact-bloc {
+  .contact-bloc {
     text-align: left;
   }
 }
 @media screen and (max-width: 750px) and (max-width: 610px) {
-  body .contact .contact-content .contact-bloc a, body .contact .contact-content .contact-bloc h1 {
+  .contact-bloc a, .contact-bloc h1 {
     font-size: 48px;
     margin: 20px 0 20px 0;
   }
-  body .contact .contact-content .contact-bloc h2 {
+  .contact-bloc h2 {
     font-size: 24px;
   }
 }
 @media screen and (max-width: 580px) {
-  body .home .home-content {
+  .home-content {
     box-shadow: inset 1000px 0rem 5vw rgba(0, 0, 0, 0.4);
   }
-  body .home .home-content ul {
+  .home-content ul {
     margin-left: 0;
   }
-  body .home .home-content ul li h1 {
+  .home-content ul li h1 {
     text-align: center;
     font-size: 17vw;
   }
-  body .about .about-content {
+  .about-content {
     width: 95%;
   }
-  body .about .about-content .about-text {
+  .about-text {
     width: 100%;
   }
-  body .skill .skill-content {
+  .skill-content {
     width: 95%;
   }
-  body .skill .skill-content .skill-grid {
+  .skill-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-  body .skill .skill-content .skill-bloc {
+  .skill-bloc {
     transition: none;
     width: 100%;
   }
-  body .skill .skill-content .skill-bloc p {
+  .skill-bloc p {
     width: 100%;
   }
 }
