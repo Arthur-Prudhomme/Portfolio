@@ -605,6 +605,9 @@ body {
   }
 }
 @media screen and (max-width: 750px) {
+  .contact-content {
+    display: block;
+  }
   .contact-bloc {
     text-align: left;
   }
