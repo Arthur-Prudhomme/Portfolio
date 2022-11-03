@@ -285,9 +285,12 @@ body{
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
     padding: 15px;
     transition: 0.3s ease 0s;
-    p{
+    p, li{
         text-align: left;
-        width: 550px;
+        width: 500px;
+    }
+    li{
+        margin-left: 50px;
     }
 }
 

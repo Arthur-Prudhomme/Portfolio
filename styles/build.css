@@ -307,9 +307,12 @@ body {
   padding: 15px;
   transition: 0.3s ease 0s;
 }
-.skill-bloc p {
+.skill-bloc p, .skill-bloc li {
   text-align: left;
-  width: 550px;
+  width: 500px;
+}
+.skill-bloc li {
+  margin-left: 50px;
 }
 
 .project-content {
