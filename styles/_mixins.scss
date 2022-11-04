@@ -1,11 +1,11 @@
-@mixin gradient_cym(){
+@mixin gradient_cym(){ //dark mode
     color: var(--blue);
     &:hover{
         animation: gradient_cym_data 3s infinite;
     }
 }
 
-@mixin gradient_darker_cym(){
+@mixin gradient_darker_cym(){ //light mode
     color: var(--darker-blue);
     &:hover{
         animation: gradient_darker_cym_data 3s infinite;

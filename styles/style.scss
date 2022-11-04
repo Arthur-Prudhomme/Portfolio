@@ -1,6 +1,6 @@
 @use 'mixins';
 
-:root {
+:root { //colors for dark/light mode
     --bg-dark: #0e0e0f;
     --bg-light: #e7e3e3;
     --darker-dark: #0a0a0a;
@@ -23,28 +23,21 @@
     scroll-behavior: smooth;
 }
 
-@keyframes gradient_cym_data {
+@keyframes gradient_cym_data { //dark mode gradient
     0% { color: var(--blue); }
     40% { color: var(--yellow); }
     80% { color: var(--magenta); }
     100% { color: var(--blue); }
 }
 
-@keyframes gradient_darker_cym_data {
+@keyframes gradient_darker_cym_data { //light mode gradient
     0% { color: var(--darker-blue); }
     40% { color: var(--darker-yellow); }
     80% { color: var(--darker-magenta); }
     100% { color: var(--darker-blue); }
 }
 
-@keyframes shadow-cym {
-    0% { background-color : var(--blue); }
-    40% { background-color : var(--yellow); }
-    80% { background-color : var(--magenta); }
-    100% { background-color : var(--blue); }
-}
-
-#burger-menu {
+#burger-menu { //setup of the burger menu style
     display: none;
 	cursor: pointer;
 	height: 27px;
@@ -82,7 +75,7 @@
 		top: 10px;
 		width: 27px;
 	}
-	&.close {
+	&.close { //when open
 		span:before {
 			top: 0px;
 			transform: rotate(90deg);
@@ -103,7 +96,7 @@
 	}
 }
 
-#menu {
+#menu { //overlay to display links in
 	z-index: 1;
 	min-width: 100%;
 	min-height: 100%;
@@ -137,7 +130,7 @@
     }
 }
 
-.nav-menu{
+.nav-menu{ //nav bar
     background: var(--darker-dark);
     transition: 0.3s;
     display: flex;
@@ -158,7 +151,7 @@
     }
 }
 
-.menu{
+.menu{ //link titles
     display: flex;
     list-style: none;
     gap: 3rem;
@@ -166,7 +159,7 @@
         text-decoration: none;
         font-size: 20px;
         font-weight: bold;
-        @include mixins.gradient_cym;
+        @include mixins.gradient_cym; //first use of mixin dark gradient
         color:white;
     }
 }
@@ -174,15 +167,14 @@
 body{
     background-color: var(--bg-dark);
     color: white;
-    transition: 0.3s;
 }
 
-.home, .about, .skill, .project{
+.home, .about, .skill, .project{ //dimensions of sections
     width: 100%;
     height: 1000px;
 }
 
-.home-content{
+.home-content{ //definition of static backgroud and main title style
     width: 100%;
     height: 100%;
     background: url("../imgs/accueil.jpg");
@@ -207,11 +199,11 @@ body{
     }
 }
 
-.colored-title{
+.colored-title{ //third text in main title
     animation: gradient_cym_data 4s infinite;
 }
 
-.about-content{
+.about-content{ //about global
     display: flex;
     position: relative;
     top: 50%;
@@ -231,7 +223,7 @@ body{
     }
 }
 
-.about-text{   
+.about-text{ //about's text
     background-color: var(--bg-dark);
     border-radius: 25px;  
     padding: 15px; 
@@ -247,7 +239,7 @@ body{
     }
 }
 
-.skill-content{
+.skill-content{ //skill content position
     display: flex;
     justify-content: center;
     position: relative;
@@ -256,7 +248,7 @@ body{
     gap: 30px;
 }
 
-.skill-grid{
+.skill-grid{ //skill imgs
     display: grid;
     grid-template-columns: repeat(3, 150px);
     grid-template-rows: repeat(2, 180px);
@@ -279,7 +271,7 @@ body{
     }
 }
 
-.skill-bloc{
+.skill-bloc{ //skill text
     background-color: #0e0e0f;
     border-radius: 25px;
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
@@ -295,7 +287,7 @@ body{
     }
 }
 
-.project-content{
+.project-content{ //project content position
     display: block;
     position: relative;
     top: 50%;
@@ -304,7 +296,7 @@ body{
     height: 600px;
 }
 
-.tab{
+.tab{ //tab button
     overflow: hidden;
     button {
         background-color: inherit;
@@ -326,12 +318,12 @@ body{
     }
 }
 
-.tabcontent {
+.tabcontent { //hide the tabcontents without display=block
     display: none;
     padding: 6px 12px;
 }
 
-.pro-container{
+.pro-container{ //the 6 project's emplacement
     display: grid;
     grid-template-columns: repeat(3, 350px);
     grid-template-rows: repeat(2, 220px);
@@ -343,7 +335,7 @@ body{
     }
 }
 
-.pro{
+.pro{ //individual thumbnails
     width: 100%;
     height: 100%;
     background: url("../imgs/accueil.jpg");
@@ -368,7 +360,7 @@ body{
     }
 }
 
-.contact{
+.contact{ //dimensions of contact section half as big as the others
     width: 100%;
     height: 500px;
     background-color: var(--darker-dark);
@@ -395,17 +387,17 @@ body{
     margin-right: 30%;
 }
 
-.light-icons{
+.light-icons{ //display when dark mode is activated
     display: flex;
 }
-.dark-icons{
+.dark-icons{ //display when light mode is activated
     display: none;
 }
 
-.light-mode-body {
+.light-mode-body { //light mode style -> text color = black | background color = shades of white
     background-color: var(--bg-light);
     color: black;
-    .skill-bloc, .skill-grid a div, .about-content img, .about-text{
+    .skill-bloc, .skill-grid a div, .about-content img, .about-text{ //change every shadow
         box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
     }
     #burger-menu{
@@ -458,7 +450,7 @@ body{
         }
     }
     .nav-menu ul a{
-        @include mixins.gradient_darker_cym;
+        @include mixins.gradient_darker_cym; //first use of mixin light gradient
         color: black;
     }
     .about-text a, .about-text h1, .pro-container a, .contact-bloc h1, .contact-bloc a{
@@ -481,7 +473,7 @@ body{
     }
 }
 
-.switch {
+.switch { //allow to switch between dark/light mode
     display: block;
     position: relative;
     margin: auto; 
@@ -508,7 +500,7 @@ body{
     input:checked + span {
         background: #000000;
     }
-    input + span:before {
+    input + span:before { //after clicked
         content: "";
         display: inline-block;
         position: absolute;
@@ -527,7 +519,7 @@ body{
     }
 }
 
-@media screen and (max-width : 1180px){
+@media screen and (max-width : 1180px){ //rearrange global content
     #burger-menu{
         display: unset;
     }
@@ -566,10 +558,8 @@ body{
         grid-template-columns: repeat(3, 1fr);
     }
 }
-@media screen and (max-width : 750px){
-    
-}
-@media screen and (max-width : 580px){
+
+@media screen and (max-width : 580px){ //readapt global content
     .home-content{
         box-shadow: inset 1000px 0rem 5vw rgba(0,0,0,0.4);
         ul{

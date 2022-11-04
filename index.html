@@ -14,21 +14,24 @@
 
 
 <body>
-
     <header>
         <nav class="nav-menu" id="nav">
             <div>
                 <a href="index.html"><img src="./imgs/logo.png" alt="logo"></a>
+                
+                <!--light mode-->
                 <label class="switch">
                     <input type="checkbox" onclick="toggleLightMode()" autocomplete="off"/>
                     <span></span>
                 </label>
+                
             </div>
 
             <div id="burger-menu">
                 <span></span>
             </div>
 
+            <!--displayed when burger menu isn't-->
             <ul class="menu">
                 <li><a href="#sc-home">Accueil</a></li>
                 <li><a href="#sc-about">À Propos</a></li>
@@ -37,6 +40,7 @@
                 <li><a href="#sc-contacts">Contacts</a></li>
             </ul>
 
+            <!--display in burger menu-->
             <ul id="menu">
                 <li><a href="#sc-home">Accueil</a></li>
                 <li><a href="#sc-about">À Propos</a></li>
@@ -47,6 +51,7 @@
         </nav>
     </header>
 
+<!--main title-->
     <section class="home" id="sc-home">
         <div class="home-content">
             <ul>
@@ -63,6 +68,7 @@
         </div>
     </section>
 
+<!--a presentation-->
     <section class="about" id="sc-about">
         <div class="about-content">
             <img src="./imgs/pp.jpg" alt="profil picture">
@@ -77,6 +83,7 @@
         </div>
     </section>
 
+<!--present skills in grid and text-->
     <section class="skill" id="sc-skill">
         <div class="skill-content">
             <div class="skill-grid">
@@ -112,6 +119,7 @@
                     <li>Photoshop</li>
                     <li>Premiere Pro</li>
                     <li>Figma</li>
+                    <li>Git</li>
                 </ul><br>
                 <p>Aptitudes :</p>
                 <ul>
@@ -125,14 +133,17 @@
         </div>
     </section>
 
+<!--display project in different tab-->
     <section class="project" id="sc-projects">
         <div class="project-content">
+            <!--allow to switch between different tab with 6 emplacements for project each-->
             <div class="tab">
                 <button class="tablinks active" onclick="openPage(event, 'page-1')"><i class="fas fa-circle"></i></button>
                 <button class="tablinks" onclick="openPage(event, 'page-2')"><i class="fas fa-circle"></i></button>
                 <button class="tablinks" onclick="openPage(event, 'page-3')"><i class="fas fa-circle"></i></button>
             </div>
 
+            <!--tab 1-->
             <div id="page-1" class="tabcontent" style="display : block">
                 <div class="pro-container">
                     <a href="#"><div class="pro"><h1>Titre 1</h1></div></a>
@@ -144,6 +155,7 @@
                 </div>
             </div>
             
+            <!--2-->
             <div id="page-2" class="tabcontent">
                 <div class="pro-container">
                     <a href="#"><div class="pro"><h1>Titre 7</h1></div></a>
@@ -155,6 +167,7 @@
                 </div>
             </div>
             
+            <!--tab 3-->
             <div id="page-3" class="tabcontent">
                 <div class="pro-container">
                     <a href="#"><div class="pro"><h1>Titre 13</h1></div></a>
@@ -168,6 +181,7 @@
         </div>
     </section>
 
+<!--display contact options-->
     <footer>
         <section class="contact" id="sc-contacts">
             <div class="contact-bloc">
@@ -176,6 +190,8 @@
                     <a href="https://www.linkedin.com/in/arthur-prud-homme/"><img src="./imgs/linkedin.png" alt="linkedin light"></a>
                     <a href="mailto:arthurprudhommemail06@gmail.com"><img src="./imgs/mail.png" alt="mail light"></a>
                 </div>
+
+                <!--display when light mode is on-->
                 <div class="dark-icons">
                     <a href="https://github.com/Arthur-Prudhomme"><img src="./imgs/github - light.png" alt="github dark"></a>
                     <a href="https://www.linkedin.com/in/arthur-prud-homme/"><img src="./imgs/linkedin - light.png" alt="linkedin dark"></a>

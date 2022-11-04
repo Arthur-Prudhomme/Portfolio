@@ -49,20 +49,6 @@
     color: var(--darker-blue);
   }
 }
-@keyframes shadow-cym {
-  0% {
-    background-color: var(--blue);
-  }
-  40% {
-    background-color: var(--yellow);
-  }
-  80% {
-    background-color: var(--magenta);
-  }
-  100% {
-    background-color: var(--blue);
-  }
-}
 #burger-menu {
   display: none;
   cursor: pointer;
@@ -194,7 +180,6 @@
 body {
   background-color: var(--bg-dark);
   color: white;
-  transition: 0.3s;
 }
 
 .home, .about, .skill, .project {
