@@ -241,8 +241,11 @@ body {
   width: 500px;
   transition: 0.3s ease 0s;
 }
-.about-text p, .about-text h1 {
+.about-text li, .about-text h1 {
   text-align: left;
+}
+.about-text li {
+  margin-left: 15px;
 }
 .about-text a, .about-text h1 {
   color: var(--blue);

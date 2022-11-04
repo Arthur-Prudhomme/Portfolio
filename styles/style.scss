@@ -229,8 +229,11 @@ body{
     padding: 15px; 
     width: 500px;
     transition: 0.3s ease 0s;
-    p, h1{
+    li, h1{
         text-align: left;
+    }
+    li{
+        margin-left: 15px;
     }
     a, h1{
         @include mixins.gradient_cym;
