@@ -19,7 +19,7 @@ function openPage(evt, pageName) {
   evt.currentTarget.className += " active";
 }
 
-function toggleLightMode() {
+function toggleLightMode() { //manage light mode
   var global = document.body;
   global.classList.toggle("light-mode-body");
 }
@@ -28,13 +28,12 @@ var burgerMenu = document.getElementById('burger-menu');
 var overlay = document.getElementById('menu');
 var li_nav = document.getElementById('c-nav');
 
-burgerMenu.addEventListener('click', function() {
+burgerMenu.addEventListener('click', function() { //open menu burger overlay and add event to close it when clicked
   this.classList.toggle("close");
   overlay.classList.toggle("overlay");
 });
 
-
-overlay.addEventListener('click', function() {
+overlay.addEventListener('click', function() { //add event to the titles to close the overlay when clicked
   burgerMenu.classList.toggle("close");
   overlay.classList.toggle("overlay");
 });
