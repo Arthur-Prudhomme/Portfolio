@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  background-color: #0F0026;
+}
+
+section {
+  background-color: #0F0026;
+  color: white;
+  margin-top: 150px;
+  padding: 50px;
+}
+
+.wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 100px;
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.background, .hills_1, .palm_trees, .hills_2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  user-select: none;
+}
+
+.foreground {
+  position: absolute;
+  width: 100%;
+  height: 170%;
+  object-fit: cover;
+  z-index: -1;
+  top: 0;
+  user-select: none;
+}
+
+.background {
+  transform: translateZ(-100px) scale(2.1);
+}
+
+.hills_2 {
+  transform: translateZ(-50px) scale(1.52);
+}
+
+.palm_trees {
+  transform: translateZ(-25px) scale(1.27);
+}
+
+.hills_1 {
+  transform: translateZ(-10px) scale(1.12);
+}
+
+.foreground {
+  transform: translateZ(20px) scale(0.82);
+}
+
+/*# sourceMappingURL=build.css.map */
