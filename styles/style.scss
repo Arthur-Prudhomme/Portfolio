@@ -1,6 +1,25 @@
+:root {
+    --blue: #1ad1c5;
+    --yellow: #ebd161;
+    --magenta: #e26ae2;
+}
+
 body {
     margin: 0;
     background-color: #0F0026;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    scroll-behavior: smooth;
+}
+
+@keyframes border_gradient {
+    0% { border: 5px solid var(--blue); }
+    40% { border: 5px solid var(--yellow); }
+    80% { border: 5px solid var(--magenta); }
+    100% { border: 5px solid var(--blue); }
 }
 
 section {
@@ -15,6 +34,7 @@ section {
     overflow-y: auto;
     overflow-x: hidden;
     perspective: 100px;
+    cursor: none;
 }
 
 header {
@@ -64,4 +84,42 @@ header {
 
 .foreground {
     transform: translateZ(20px) scale(0.82);
+}
+
+#mouse, #mouseCircle{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+
+    opacity: 0;
+    transition: opacity 500ms ease;
+    pointer-events: none;
+}
+
+#mouse{
+    height: 10px;
+    width: 10px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+#mouseCircle{
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    animation: border_gradient 4s infinite;
+}
+
+button{
+    display: flex;
+    margin: auto;
+}
+
+body:hover > #mouse, body:hover > #mouseCircle{
+    opacity: 1;
+}
+
+.interactable{
+    cursor: none;
 }
