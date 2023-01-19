@@ -5,11 +5,11 @@ const animeMouse = (e, interacting) => {
     const x = e.clientX, y = e.clientY;
 
     const keyframesM = {
-        transform: `translate(${x - mouse.offsetHeight /2}px, ${y - mouse.offsetHeight /2}px) scale(${interacting ? 2 : 1})`
+        transform: `translate(${x - mouse.offsetHeight /2}px, ${y - mouse.offsetHeight /2}px) scale(${interacting ? 1 : 1})`
     }
 
     const keyframesMC = {
-        transform: `translate(${x - mouseCircle.offsetHeight /2}px, ${y - mouseCircle.offsetHeight /2}px) scale(${interacting ? 3 : 1})`
+        transform: `translate(${x - mouseCircle.offsetHeight /2}px, ${y - mouseCircle.offsetHeight /2}px) scale(${interacting ? 2 : 1})`
     }
 
     mouse.animate(keyframesM, {
