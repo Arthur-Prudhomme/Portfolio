@@ -42,6 +42,11 @@ section {
     height: 100vh;
 }
 
+.contact{
+    height: 50vh;
+    background-color: var(--darker-dark);
+}
+
 .wrapper {
     height: 100vh;
     overflow-y: scroll;
@@ -137,3 +142,6 @@ body:hover > #mouse, body:hover > #mouseCircle{
     cursor: none;
 }
 
+#invert_colors{
+    filter: invert(1);
+}
