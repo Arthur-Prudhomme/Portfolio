@@ -152,4 +152,42 @@ body:hover > #mouse, body:hover > #mouseCircle {
   filter: invert(1);
 }
 
+div[class^=card_skills] {
+  width: fit-content;
+  height: fit-content;
+  background-color: var(--bg-dark);
+  border-radius: 25px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+}
+div[class^=card_skills] img {
+  height: 100px;
+}
+
+.languages, .softwares-techs {
+  display: grid;
+  grid-template-columns: repeat(3, fit-content(100%));
+  grid-template-rows: repeat(3, fit-content(100%));
+  gap: 15px;
+  transition: 0.5s ease 0s;
+  padding: 20px;
+  border-radius: 30px;
+}
+.skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#skill-container {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  background-color: var(--darker-dark);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  width: fit-content;
+  height: fit-content;
+}
+
 /*# sourceMappingURL=build.css.map */
