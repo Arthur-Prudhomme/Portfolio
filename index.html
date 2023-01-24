@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 </head>
 <body>
     <div id="mouse"></div>
@@ -33,7 +34,7 @@
             </div>
         </section>
 
-        <section class="skill" id="sc-skill">
+        <!-- <section class="skill" id="sc-skill">
             <h2 class="vert-title">COMPÉTENCES</h2>
             <div id="skill-container">
                 <div class="languages">
@@ -78,13 +79,13 @@
                         </div>
                     </a>
                 </div>
-                <!-- <div class="softskills">
+                <div class="softskills">
                     <div class="card_skills_softskills_AUTO interactable"><h2>AUTONOMIE</h2></div>
                     <div class="card_skills_softskills_TEE interactable"><h2>TRAVAIL EN ÉQUIPE</h2></div>
                     <div class="card_skills_softskills_ADAPT interactable"><h2>ADAPTABILITÉ</h2></div>
                     <div class="card_skills_softskills_EMP interactable"><h2>EMPATHIE</h2></div>
                     <div class="card_skills_softskills_SOC interactable"><h2>SOCIAL</h2></div>
-                </div> -->
+                </div>
                 <div class="softwares-techs">
                     <a href="https://www.adobe.com/fr/products/photoshop.html" class="interactable">
                         <div class="card_skills_st_PHOTOSHOP">
@@ -113,6 +114,90 @@
                     </a>
                 </div>
             </div>
+        </section> -->
+
+        <section class="skill" id="sc-skill">
+            <h2 class="vert-title">COMPÉTENCES</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <h3 class="vert-sub-title">Langages</h3>
+                    <div class="languages">
+                        <a href="https://www.w3schools.com/cs/" class="interactable">
+                            <div class="card_skills_languages_C#">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" />
+                            </div>
+                        </a>
+                        <a href="https://www.w3schools.com/html/" class="interactable">
+                            <div class="card_skills_languages_HTML">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+                            </div>
+                        </a>
+                        <a href="https://www.w3schools.com/css/" class="interactable">
+                            <div class="card_skills_languages_CSS">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+                            </div>
+                        </a>
+                        <a href="https://www.php.net" class="interactable">
+                            <div class="card_skills_languages_PHP">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
+                            </div>  
+                        </a>
+                        <a href="https://www.python.org" class="interactable">
+                            <div class="card_skills_languages_PYTHON">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+                            </div>
+                        </a>
+                        <a href="https://sass-lang.com" class="interactable">
+                            <div class="card_skills_languages_SASS">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
+                            </div>
+                        </a>
+                        <a href="https://www.w3schools.com/js/" class="interactable">
+                            <div class="card_skills_languages_JS">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+                            </div>
+                        </a>
+                        <a href="https://vuejs.org/" class="interactable">
+                            <div class="card_skills_languages_VUE">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" />
+                            </div>
+                        </a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <h3 class="vert-sub-title">Technologies</h3>
+                    <div class="softwares-techs">
+                        <a href="https://www.adobe.com/fr/products/photoshop.html" class="interactable">
+                            <div class="card_skills_st_PHOTOSHOP">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" />
+                            </div>
+                        </a>
+                        <a href="https://www.adobe.com/fr/products/premiere.html" class="interactable">
+                            <div class="card_skills_st_PREMIERE">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg" />
+                            </div>
+                        </a>
+                        <a href="https://wordpress.com/fr/" class="interactable">
+                            <div class="card_skills_st_WORDPRESS">
+                                <img id="invert_colors" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" />
+                            </div>
+                        </a>
+                        <a href="https://www.figma.com/" class="interactable">
+                            <div class="card_skills_st_FIGMA">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
+                            </div>
+                        </a>
+                        <a href="https://git-scm.com/" class="interactable">
+                            <div class="card_skills_st_GIT">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+                            </div>
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination interactable"></div>
+              </div>
         </section>
 
         <section class="project" id="sc-project">
@@ -134,5 +219,17 @@
         </footer>
     </div>
     <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        });
+    </script>
 </body>
 </html>

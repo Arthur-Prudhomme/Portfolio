@@ -45,6 +45,20 @@ body {
     100% { color: var(--blue); }
 }
 
+@keyframes background_gradient {
+    0% { background: var(--blue); }
+    40% { background: var(--yellow); }
+    80% { background: var(--magenta); }
+    100% { background: var(--blue); }
+}
+
+@keyframes text-shadow_gradient {
+    0% { text-shadow: var(--blue) 5px 5px 0; }
+    40% { text-shadow: var(--yellow) 5px 5px 0; }
+    80% { text-shadow: var(--magenta) 5px 5px 0; }
+    100% { text-shadow: var(--blue) 5px 5px 0; }
+}
+
 section {
     background-color: var(--bg-dark);
     color: white;
@@ -185,6 +199,7 @@ div[class^='card_skills']{
     transition: 0.5s ease 0s;
     border-radius: 30px;
     padding: 20px;
+    z-index: 1;
 }
 
 .about, .skill, .project{
@@ -213,6 +228,16 @@ div[class^='card_skills']{
     border-radius: 20px;
 }
 
+.vert-sub-title{
+    font-size: 40px;
+    position: absolute;
+    left: 1rem;
+    writing-mode: sideways-lr;
+    white-space: nowrap;
+    padding: 20px;
+    color: whitesmoke;
+}
+
 #skill-container, #about-container{
     display: flex;
     flex-wrap: wrap;
@@ -235,4 +260,31 @@ div[class^='card_skills']{
     justify-content: center;
     align-items: center;
     gap: 30px;
+}
+
+.swiper{
+    height: 500px;
+    width: 55vw;
+    display: flex;
+    flex-direction: row!important;
+    background-color: var(--darker-dark);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+}
+
+.swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.swiper-pagination-bullet{
+    height: 90px!important;
+    width: 15px!important;
+    border-radius: 20px!important;
+    animation: background_gradient 3s infinite!important;
+    &:hover{
+        pointer-events: none;
+    }
+    
 }
