@@ -92,6 +92,13 @@ header {
     transform: translateZ(-100px) scale(2.1);
 }
 
+.home_title{
+    font-size: 64px;
+    animation: color_gradient 4s infinite;
+    text-shadow: rgba(0, 0, 0, 1) 0 0 10px;
+    transform: translateZ(-60px) scale(1.62);
+}
+
 .hills_2 {
     transform: translateZ(-50px) scale(1.52);
 }
@@ -176,9 +183,6 @@ div[class^='card_skills']{
     transition: 0.5s ease 0s;
     border-radius: 30px;
     padding: 20px;
-    &:hover{
-        
-    }
 }
 
 .about, .skill, .project{
