@@ -93,10 +93,12 @@ header {
 }
 
 .home_title{
-    font-size: 64px;
+    position: absolute;
+    font-size: 72px;
     animation: color_gradient 4s infinite;
     text-shadow: rgba(0, 0, 0, 1) 0 0 10px;
     transform: translateZ(-60px) scale(1.62);
+    top: 30vh;
 }
 
 .hills_2 {
