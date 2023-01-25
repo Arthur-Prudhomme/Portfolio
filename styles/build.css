@@ -332,7 +332,7 @@ div[class^=card_skills]:hover img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 150px;
 }
 
 .swiper {
