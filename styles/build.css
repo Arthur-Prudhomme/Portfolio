@@ -194,6 +194,7 @@ body:hover > #mouse, body:hover > #mouseCircle {
 
 .interactable {
   cursor: none;
+  user-select: none;
 }
 .interactable:hover {
   pointer-events: none;
@@ -275,6 +276,43 @@ div[class^=card_skills] {
 #about-container {
   background-color: var(--darker-dark);
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  flex-wrap: unset;
+  align-items: center;
+  gap: 30px;
+}
+#about-container img {
+  height: 400px;
+  border-radius: 30px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+}
+
+#about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+#about-content p {
+  text-align: left;
+}
+
+#about-contact-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+#about-contact-cards img {
+  height: 60px;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.spacing {
+  height: 400px;
+  width: 15px;
+  background-color: white;
   border-radius: 30px;
 }
 
