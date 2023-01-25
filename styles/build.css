@@ -174,11 +174,12 @@ header {
   width: 10px;
   border-radius: 20px;
   background-color: white;
+  border: 0.2px solid black;
 }
 
 #mouseCircle {
-  height: 40px;
-  width: 40px;
+  height: 25px;
+  width: 25px;
   border-radius: 40px;
   animation: border_gradient 4s infinite;
 }
@@ -215,6 +216,16 @@ div[class^=card_skills] {
   border-radius: 25px;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
   padding: 15px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+div[class^=card_skills]:hover .perspective {
+  display: flex;
+  transform: translateZ(25px);
+}
+div[class^=card_skills]:hover img {
+  transition: 0.3s ease 0s;
+  transform: scale(120%);
 }
 
 .languages, .softwares-techs {
@@ -290,7 +301,7 @@ div[class^=card_skills] {
 #about-content {
   display: flex;
   flex-direction: column;
-  gap: 70px;
+  gap: 60px;
 }
 #about-content p {
   text-align: left;
@@ -299,19 +310,18 @@ div[class^=card_skills] {
 #about-contact-cards {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 50px;
 }
 #about-contact-cards img {
-  height: 60px;
+  height: 70px;
   box-shadow: none;
   border-radius: 0;
 }
 
 .spacing {
   height: 400px;
-  width: 15px;
+  width: 8px;
   background-color: white;
   border-radius: 30px;
 }
