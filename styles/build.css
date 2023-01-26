@@ -289,7 +289,7 @@ div[class^=card_projects]:hover .perspective {
 
 .swiper-button-next, .swiper-button-prev {
   animation: color_gradient infinite 3s;
-  text-shadow: rgb(0, 0, 0) 0 0 10px;
+  text-shadow: rgb(0, 0, 0) 0 0 10px, rgb(0, 0, 0) 0 0 10px, rgb(0, 0, 0) 0 0 10px;
 }
 
 .swiper-wrapper-projects {
