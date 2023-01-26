@@ -260,8 +260,8 @@ div[class^=card_skills]:hover img {
 }
 
 div[class^=card_projects] {
-  height: 520px;
-  width: 220px;
+  height: 90%;
+  width: 50px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -283,11 +283,18 @@ div[class^=card_projects] a {
   align-items: center;
   text-decoration: none;
 }
-div[class^=card_projects]:hover {
-  transform: scale(120%);
-}
 div[class^=card_projects]:hover .perspective {
-  transform: translateZ(25px);
+  transform: translateZ(70px);
+}
+
+.swiper-button-next, .swiper-button-prev {
+  animation: color_gradient infinite 3s;
+  text-shadow: rgb(0, 0, 0) 0 0 10px;
+}
+
+.swiper-wrapper-projects {
+  display: flex;
+  align-items: center;
 }
 
 #skill-container {

@@ -49,7 +49,7 @@
 
         <section class="skill" id="sc-skill">
             <h2 class="vert-title">COMPÉTENCES</h2>
-            <div class="swiper mySwiper">
+            <div class="swiper mySkills">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <h3 class="vert-sub-title">Langages</h3>
@@ -152,7 +152,7 @@
               </div>
         </section>
 
-        <section class="project" id="sc-project">
+        <!-- <section class="project" id="sc-project">
             <h2 class="vert-title">PROJETS</h2>
             <div id="project-container">
                 <div id="project-content">
@@ -173,6 +173,32 @@
                     </div>
                 </div>
             </div>
+        </section> -->
+
+        <section class="project" id="sc-project">
+            <h2 class="vert-title">PROJETS</h2>
+            <div class="swiper myProjects">
+                <div class="swiper-wrapper swiper-wrapper-projects">
+                    <div class="card_projects_devlab swiper-slide" data-tilt data-tilt-max="30" data-tilt-perspective="800">
+                        <a href="https://github.com/Arthur-Prudhomme/Devlab/tree/lucie" class="perspective interactable">
+                            <h2>Devlab</h2>
+                        </a>
+                    </div>
+                    <div class="card_projects_pouetkedex swiper-slide" data-tilt data-tilt-max="30" data-tilt-perspective="800">
+                        <a href="https://iim-creative-technology.github.io/JS-A2-pouetkedex/" class="perspective interactable">
+                            <h2>Pouetkedex</h2>
+                        </a>
+                    </div>
+                    <div class="card_projects_ecologica swiper-slide" data-tilt data-tilt-max="30" data-tilt-perspective="800">
+                        <a href="https://github.com/EthraDev/site_static_ecologica" class="perspective interactable">
+                            <h2>Ecologica</h2>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-button-next interactable"></div>
+                <div class="swiper-button-prev interactable"></div>
+                <div class="swiper-pagination"></div>
+              </div>
         </section>
 
         <footer class="contact" id="sc-contacts">
@@ -194,7 +220,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <script>
-        var swiper = new Swiper(".mySwiper", {
+        var swiper = new Swiper(".mySkills", {
         direction: "vertical",
         pagination: {
             el: ".swiper-pagination",
@@ -204,5 +230,25 @@
     </script>
 
     <script type="text/javascript" src="vanilla-tilt.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".myProjects", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        });
+    </script>
 </body>
 </html>

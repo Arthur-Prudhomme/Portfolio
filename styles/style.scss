@@ -244,8 +244,8 @@ div[class^='card_skills']{
 }
 
 div[class^='card_projects']{
-    height: 520px;
-    width: 220px;
+    height: 90%;
+    width: 50px;
 
     background-position: center;
     background-repeat: no-repeat;
@@ -270,11 +270,20 @@ div[class^='card_projects']{
         text-decoration: none;
     }
     &:hover{
-        transform: scale(120%);
         .perspective{
-            transform: translateZ(25px);
+            transform: translateZ(70px);
         }
     }
+}
+
+.swiper-button-next, .swiper-button-prev{
+    animation: color_gradient infinite 3s;
+    text-shadow: rgba(0, 0, 0, 1) 0 0 10px;
+}
+
+.swiper-wrapper-projects{
+    display: flex;
+    align-items: center;
 }
 
 #skill-container{
