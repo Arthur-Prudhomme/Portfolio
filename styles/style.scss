@@ -283,6 +283,12 @@ div[class^='card_projects']{
     rgba(0, 0, 0, 1) 0 0 10px;
 }
 
+.swiper-pagination-projects{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
 .swiper-wrapper-projects{
     display: flex;
     align-items: center;

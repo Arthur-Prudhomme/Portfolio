@@ -292,6 +292,12 @@ div[class^=card_projects]:hover .perspective {
   text-shadow: rgb(0, 0, 0) 0 0 10px, rgb(0, 0, 0) 0 0 10px, rgb(0, 0, 0) 0 0 10px;
 }
 
+.swiper-pagination-projects {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
 .swiper-wrapper-projects {
   display: flex;
   align-items: center;
