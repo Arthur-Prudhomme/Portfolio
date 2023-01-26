@@ -1,6 +1,6 @@
 :root {
   --bg-dark: #0e0e0f;
-  --darker-dark: #0a0a0a;
+  --darker-dark: #0a0a0a80;
   --blue: #1ad1c5;
   --yellow: #ebd161;
   --magenta: #e26ae2;
@@ -82,6 +82,10 @@ section {
   background-color: var(--bg-dark);
   color: white;
   height: 100vh;
+}
+
+.hight-container {
+  z-index: 2;
 }
 
 .wrapper {
@@ -447,6 +451,27 @@ div[class^=card_projects]:hover .perspective {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
+}
+
+[class^=blob] {
+  position: absolute;
+  z-index: 0;
+}
+
+.blob_1, .blob_1_glow {
+  transform: translateX(30%);
+}
+
+.blob_2, .blob_2_glow {
+  transform: translateX(-30%) translateY(50%);
+}
+
+.blob_1_glow, .blob_2_glow {
+  filter: blur(50px);
+}
+
+.blur {
+  backdrop-filter: blur(5px);
 }
 
 /*# sourceMappingURL=build.css.map */
