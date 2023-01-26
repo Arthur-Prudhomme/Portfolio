@@ -275,6 +275,7 @@ div[class^=card_projects] {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px;
+  filter: grayscale(100%);
   transform-style: preserve-3d;
   perspective: 1000px;
   position: relative;
@@ -292,6 +293,9 @@ div[class^=card_projects] a {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+}
+div[class^=card_projects]:hover {
+  filter: none;
 }
 div[class^=card_projects]:hover h2 {
   display: unset;
