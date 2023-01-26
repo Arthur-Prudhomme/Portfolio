@@ -281,6 +281,7 @@ div[class^=card_projects] {
   font-size: 32px;
 }
 div[class^=card_projects] h2 {
+  display: none;
   animation: color_gradient infinite 4s;
   text-shadow: rgb(0, 0, 0) 0 0 10px;
 }
@@ -291,6 +292,9 @@ div[class^=card_projects] a {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+}
+div[class^=card_projects]:hover h2 {
+  display: unset;
 }
 div[class^=card_projects]:hover .perspective {
   transform: translateZ(70px);
