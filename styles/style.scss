@@ -52,13 +52,6 @@ body {
     100% { background: var(--blue); }
 }
 
-@keyframes text-shadow_gradient {
-    0% { text-shadow: var(--blue) 5px 5px 0; }
-    40% { text-shadow: var(--yellow) 5px 5px 0; }
-    80% { text-shadow: var(--magenta) 5px 5px 0; }
-    100% { text-shadow: var(--blue) 5px 5px 0; }
-}
-
 section {
     background-color: var(--bg-dark);
     color: white;
@@ -219,7 +212,69 @@ div[class^='card_skills']{
 .about, .skill, .project{
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+}
+
+#project-content{
+    display: grid;
+    
+    grid-template-columns: repeat(3, fit-content(100%));
+    grid-template-rows: repeat(1, fit-content(100%));
+    gap: 15px;
+    
+    border-radius: 30px;
+    justify-content: center;
+}
+
+#project-container{
+    display: flex;
+    background-color: var(--darker-dark);
+    width: 55vw;
+    border-radius: 30px;
+}
+
+.card_projects_devlab{
+    background: url(../imgs/projects/devlab-back.png);
+}
+.card_projects_pouetkedex{
+    background: url(../imgs/projects/pouetkedex.png);
+}
+.card_projects_ecologica{
+    background: url(../imgs/projects/ecologica.png);
+}
+
+div[class^='card_projects']{
+    height: 520px;
+    width: 220px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    position: relative;
+
+    font-size: 32px;
+    h2{
+        animation: color_gradient infinite 4s;
+        text-shadow: rgba(0, 0, 0, 1) 0 0 10px;
+    }
+    a{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    }
+    &:hover{
+        transform: scale(120%);
+        .perspective{
+            transform: translateZ(25px);
+        }
+    }
 }
 
 #skill-container{
@@ -252,7 +307,7 @@ div[class^='card_skills']{
     color: whitesmoke;
 }
 
-#skill-container, #about-container{
+#skill-container, #about-container, #project-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -336,5 +391,4 @@ div[class^='card_skills']{
     &:hover{
         pointer-events: none;
     }
-    
 }
