@@ -73,6 +73,11 @@ body h1, body h2, body h3, body h4 {
     background: var(--blue);
   }
 }
+@keyframes floating_effect {
+  100% {
+    transform: translateY(-20px);
+  }
+}
 section {
   background-color: var(--bg-dark);
   color: white;
@@ -193,6 +198,10 @@ body:hover > #mouse, body:hover > #mouseCircle {
 
 div[class^=card_skills] img, div[class^=card_contact] img {
   height: 100px;
+}
+
+.floating:hover {
+  animation: floating_effect 1s infinite ease-in-out alternate;
 }
 
 div[class^=card_skills] {
