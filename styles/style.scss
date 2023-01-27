@@ -344,13 +344,13 @@ div[class^='card_projects']{
     color: whitesmoke;
 }
 
-#skill-container, #about-container, #project-container{
+#about-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 55vw;
     height: fit-content;
-    padding: 20px;
+    padding: 20px!important;
 }
 
 #about-container{
@@ -472,21 +472,84 @@ div[class^='card_projects']{
 }
 
 @media screen and (max-width : 1220px){
-    #about-container{
+    #about-container, .swiper{
         flex-direction: column;
         width: 450px;
     }
     .spacing{
         display: none;
     }
+    .swiper{
+        height: 550px;
+        padding-left: 20px!important;
+        padding-right: 20px!important;
+        .swiper-slide{
+            flex-direction: column!important;
+        }
+        .vert-sub-title{
+            font-size: 40px;
+            position: relative;
+            writing-mode:unset;
+            white-space: nowrap;
+            padding: 0;
+            color: whitesmoke;
+        }
+    }
 }
 
-@media screen and (max-width : 450px){
+@media screen and (max-width : 800px){
+    .vert-title{
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateX(-100%);
+        transition: all 0.5s;
+    }
+}
+
+@media screen and (max-width : 600px){
+    #contact-container{
+        width: 100vw;
+        justify-content: space-between;
+        gap: 0;
+    }
+}
+
+@media screen and (max-width : 505px){
     #about-container{
         width: 95vw;
         #pp{
             height: auto;
             width: 80vw;
+        }
+    }
+    .swiper{
+        width: 95vw;
+        div[class^='card_skills']{
+            img{
+                height: auto;
+                width: 20vw;
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 470px){
+    .home_title{
+        font-size: 15.3vw;
+    }
+}
+
+@media screen and (max-width : 360px){
+    #contact-container{
+        img{
+            height: auto;
+            width: 28vw;
+        }
+    }
+    #about-container{
+        img{
+            height: auto;
+            width: 19vw;
         }
     }
 }
