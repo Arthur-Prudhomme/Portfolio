@@ -552,7 +552,7 @@ div[class^=card_projects]:hover .perspective {
     width: 19vw;
   }
 }
-@media only screen and (hover: none) and (pointer: coarse) {
+@media only screen and (max-width: 600px) {
   * {
     cursor: auto;
     pointer-events: all;
