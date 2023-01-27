@@ -552,5 +552,14 @@ div[class^=card_projects]:hover .perspective {
     width: 19vw;
   }
 }
+@media only screen and (hover: none) and (pointer: coarse) {
+  * {
+    cursor: auto;
+    pointer-events: all;
+  }
+  #mouse, #mouseCircle {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=build.css.map */

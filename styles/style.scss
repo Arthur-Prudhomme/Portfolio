@@ -553,3 +553,13 @@ div[class^='card_projects']{
         }
     }
 }
+
+@media only screen and (hover: none) and (pointer: coarse){
+    *{
+        cursor:auto;
+        pointer-events:all;
+    }
+    #mouse, #mouseCircle{
+        display: none;
+    }
+}
