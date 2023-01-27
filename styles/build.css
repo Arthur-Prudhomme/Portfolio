@@ -459,7 +459,7 @@ div[class^=card_projects]:hover .perspective {
 }
 
 .blob_1, .blob_1_glow {
-  transform: translateX(30%);
+  transform: translateX(30%) translateY(20%);
 }
 
 .blob_2, .blob_2_glow {
