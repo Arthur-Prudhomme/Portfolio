@@ -458,6 +458,10 @@ div[class^=card_projects]:hover .perspective {
   z-index: 0;
 }
 
+.blob_1, .blob_1_glow, .blob_2, .blob_2_glow {
+  width: 1500px;
+}
+
 .blob_1, .blob_1_glow {
   transform: translateX(30%) translateY(20%);
 }
@@ -472,6 +476,28 @@ div[class^=card_projects]:hover .perspective {
 
 .blur {
   backdrop-filter: blur(5px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+}
+
+@media screen and (max-width: 1220px) {
+  #about-container {
+    flex-direction: column;
+    width: 450px;
+  }
+  .spacing {
+    display: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  #about-container {
+    width: 95vw;
+  }
+  #about-container #pp {
+    height: auto;
+    width: 80vw;
+  }
 }
 
 /*# sourceMappingURL=build.css.map */
