@@ -339,6 +339,7 @@ div[class^=card_projects]:hover .perspective {
   position: absolute;
   left: 1rem;
   writing-mode: sideways-lr;
+  -webkit-writing-mode: vertical-lr;
   animation: color_gradient 4s infinite;
   white-space: nowrap;
   background-color: var(--darker-dark);
